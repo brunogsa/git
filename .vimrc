@@ -41,7 +41,6 @@ endif
 syntax on
 set autoindent
 set smartindent
-set wrap
 set cindent
 set preserveindent
 set copyindent
@@ -57,7 +56,6 @@ set expandtab
 " ===============================================
 set background=dark
 colorscheme gruvbox
-set foldcolumn=1
 set lbr
 set tw=250
 set scrolloff=5
