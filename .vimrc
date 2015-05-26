@@ -30,11 +30,6 @@ set nowb
 set noswapfile
 set viminfo^=%
 
-" Use mouse when it exists
-if has('mouse')
-    set mouse=a
-endif
-
 " ===============================================
 " Identation config
 " ===============================================
@@ -59,15 +54,7 @@ colorscheme gruvbox
 set lbr
 set tw=250
 set scrolloff=5
-
-" Delete trailing white space on save
-func! DeleteTrailingWS()
-    exe "normal mz"
-    %s/\s\+$//ge
-    exe "normal `z"
-endfunc
-
-autocmd BufWrite * :call DeleteTrailingWS()
+set foldmethod=indent
 
 " ===============================================
 " Search system
@@ -100,7 +87,6 @@ map <silent> <Up> gk
 map <silent> <Right> l
 map e $
 map b 0
-map z %
 
 " ===============================================
 " Hotkeys
@@ -109,8 +95,5 @@ nmap <silent> <leader>c <leader>c<space>
 vmap <silent> <leader>c <leader>cs
 nmap <silent> <leader>n :set invnumber<cr>
 map <silent> <leader>s :setlocal spell!<cr>
-
-" Automatically turns off identation when pasting something with CTRL+SHIFT+V
-map <silent> <C-S-v> :setlocal paste!<cr>p:setlocal paste!<cr>
 
 " ===============================================
