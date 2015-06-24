@@ -11,8 +11,6 @@ filetype on
 " ===============================================
 let $LANG='en'
 set langmenu=en
-set encoding=utf8
-set ffs=unix,dos,mac
 
 " ===============================================
 " Efficient vim
@@ -23,12 +21,13 @@ set ruler
 set title
 set backspace=indent,eol,start
 set cursorline
-set clipboard=unnamed
+set clipboard=unnamedplus
 set showmatch
 set nobackup
-set nowb
+set nowritebackup
 set noswapfile
 set viminfo^=%
+set mouse=a
 
 " ===============================================
 " Identation config
@@ -87,13 +86,21 @@ map <silent> <Up> gk
 map <silent> <Right> l
 map e $
 map b 0
+map <silent> <leader>v :set paste<cr>"+p:set nopaste<cr>
 
 " ===============================================
 " Hotkeys
 " ===============================================
-nmap <silent> <leader>c <leader>c<space>
-vmap <silent> <leader>c <leader>cs
-nmap <silent> <leader>n :set invnumber<cr>
-map <silent> <leader>s :setlocal spell!<cr>
+map <silent> <leader><leader> <leader>c<space>
+map <F1> :set number!<cr>
+map <2-LeftMouse> \m
+map <F5> :source ~/.vimrc<cr>
+map <S-Tab> :NERDTreeToggle<CR>
+
+" ===============================================
+" GVim
+" ===============================================
+set guioptions -=m
+set guioptions -=T
 
 " ===============================================
