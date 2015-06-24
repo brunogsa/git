@@ -104,3 +104,19 @@ set guioptions -=m
 set guioptions -=T
 
 " ===============================================
+" My Snippets
+" ===============================================
+if &filetype == "javascript"
+    imap <leader>if if () {<cr><cr>} 
+    imap <leader>el else {<cr><cr>} 
+    imap <leader>ei else if () {<cr><cr>} 
+    imap <leader>fo for () {<cr><cr>} 
+    imap <leader>wh while () {<cr><cr>} 
+    imap <leader>fu function () {<cr><cr>} 
+    imap <leader>mo ( function() {<cr><cr>}() ))
+    imap <leader>/* /**<cr><cr><cr>/
+    imap <leader>to // TODO: 
+    imap <leader>fi // FIXME: 
+endif
+
+" ===============================================
