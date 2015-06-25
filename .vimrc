@@ -94,7 +94,7 @@ map <silent> <leader>v :set paste<cr>"+p:set nopaste<cr>
 " Hotkeys
 " ===============================================
 map <silent> <leader><leader> <leader>c<space>
-map <F1> :set number!<cr>
+map <F2> :set number!<cr>
 map <2-LeftMouse> \m
 map <F5> :source ~/.vimrc<cr>
 map <S-Tab> :NERDTreeToggle<CR>
@@ -102,12 +102,8 @@ map <S-Tab> :NERDTreeToggle<CR>
 " ===============================================
 " Snippets
 " ===============================================
-" Trigger configuration
-let g:UltiSnipsExpandTrigger="<leader>"
-let g:UltiSnipsJumpForwardTrigger="<leader>x"
-let g:UltiSnipsJumpBackwardTrigger="<leader>z"
-
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<leader><tab>"
 
 " ===============================================
