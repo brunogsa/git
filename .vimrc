@@ -104,9 +104,10 @@ map <S-Tab> :NERDTreeToggle<CR>
 " ===============================================
 " Trigger configuration
 let g:UltiSnipsExpandTrigger="<leader>"
+let g:UltiSnipsJumpForwardTrigger="<leader>x"
+let g:UltiSnipsJumpBackwardTrigger="<leader>z"
 
-" " If you want :UltiSnipsEdit to split your window.
+" If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
-
 
 " ===============================================
