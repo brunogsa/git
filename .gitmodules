@@ -1,0 +1,33 @@
+[submodule ".vim/bundle/delimitMate"]
+	path = .vim/bundle/delimitMate
+	url = https://github.com/Raimondi/delimitMate
+[submodule ".vim/bundle/gruvbox"]
+	path = .vim/bundle/gruvbox
+	url = https://github.com/morhetz/gruvbox
+[submodule ".vim/bundle/LargeFile"]
+	path = .vim/bundle/LargeFile
+	url = https://github.com/vim-scripts/LargeFile
+[submodule ".vim/bundle/nerdcommenter"]
+	path = .vim/bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter
+[submodule ".vim/bundle/supertab"]
+	path = .vim/bundle/supertab
+	url = https://github.com/ervandew/supertab
+[submodule ".vim/bundle/vim-surround"]
+	path = .vim/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule ".vim/bundle/tern_for_vim"]
+	path = .vim/bundle/tern_for_vim
+	url = https://github.com/marijnh/tern_for_vim
+[submodule ".vim/bundle/vim-diff-enhanced"]
+	path = .vim/bundle/vim-diff-enhanced
+	url = https://github.com/chrisbra/vim-diff-enhanced
+[submodule ".vim/bundle/vim-mark"]
+	path = .vim/bundle/vim-mark
+	url = https://github.com/Yggdroot/vim-mark
+[submodule ".vim/bundle/vim-maximizer"]
+	path = .vim/bundle/vim-maximizer
+	url = https://github.com/szw/vim-maximizer
+[submodule ".vim/bundle/vim-repeat"]
+	path = .vim/bundle/vim-repeat
+	url = https://github.com/tpope/vim-repeat
