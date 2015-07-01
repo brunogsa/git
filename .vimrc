@@ -126,5 +126,10 @@ let g:UltiSnipsJumpBackwardTrigger="<leader><tab>"
 " Run Time Features
 " ===============================================
 set runtimepath+=~/.vim/bundle/jshint2.vim
+let jshint2_read = 1
+let jshint2_save = 1
+let jshint2_min_height = 6
+let jshint2_max_height = 12
+let jshint2_confirm = 1
 
 " ===============================================
