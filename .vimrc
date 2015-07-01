@@ -21,14 +21,13 @@ set autoread
 set ruler
 set title
 set backspace=indent,eol,start
-set cursorline
 set clipboard=unnamedplus
+set cursorline
 set showmatch
 set nobackup
 set nowritebackup
 set noswapfile
 set viminfo^=%
-set mouse=a
 let g:LargeFile=0.5
 
 " ===============================================
@@ -122,5 +121,10 @@ map <S-Tab> :NERDTreeToggle<CR>
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<leader><tab>"
+
+" ===============================================
+" Run Time Features
+" ===============================================
+set runtimepath+=~/.vim/bundle/jshint2.vim
 
 " ===============================================
