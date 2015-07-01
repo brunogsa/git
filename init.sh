@@ -8,4 +8,7 @@ cd .vim/bundle/tern_for_vim/
 sudo npm update
 sudo npm install
 cd -
-echo "Done"
+
+echo "@@@ You probably want to install some Syntax Checkers, so syntastic plugin can really work."
+echo "@@@ For more details: https://github.com/scrooloose/syntastic/wiki/Syntax-Checkers"
+echo "Done!"

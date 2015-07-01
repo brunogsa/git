@@ -125,11 +125,15 @@ let g:UltiSnipsJumpBackwardTrigger="<leader><tab>"
 " ===============================================
 " Run Time Features
 " ===============================================
-set runtimepath+=~/.vim/bundle/jshint2.vim
-let jshint2_read = 1
-let jshint2_save = 1
-let jshint2_min_height = 6
-let jshint2_max_height = 12
-let jshint2_confirm = 1
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers=['jshint', 'jscs']
+let syntastic_aggregate_errors=1
 
 " ===============================================
