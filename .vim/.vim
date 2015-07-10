@@ -1,0 +1,1 @@
+/home/brunogsa/vim/.vim
