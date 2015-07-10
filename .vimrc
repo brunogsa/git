@@ -118,13 +118,6 @@ map <F5> :source ~/.vimrc<cr>
 map <S-Tab> :NERDTreeToggle<CR>
 
 " ===============================================
-" Snippets
-" ===============================================
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<leader><tab>"
-
-" ===============================================
 " Run Time Features
 " ===============================================
 set statusline+=%#warningmsg#
@@ -134,7 +127,7 @@ set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
+let g:syntastic_check_on_wq = 1
 let g:syntastic_javascript_checkers=['jshint', 'jscs']
 let syntastic_aggregate_errors=1
 
