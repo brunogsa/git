@@ -45,6 +45,7 @@ set softtabstop=4
 set shiftround
 set smarttab
 set wrap
+set mouse=n
 
 " Tab vs Spaces...
 " set expandtab
@@ -60,6 +61,9 @@ set scrolloff=5
 
 " Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
 vmap <Enter> <Plug>(EasyAlign)
+
+" You can format XML (1 by 1) via visual mode clicking on =
+set equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
 
 " ===============================================
 " Folding
