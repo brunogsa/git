@@ -45,6 +45,7 @@ set softtabstop=4
 set shiftround
 set smarttab
 set wrap
+autocmd FilterWritePre * if &diff | setlocal wrap< | endif	" Automatically set wrap when starting a vim diff
 set mouse=n
 
 " Tab vs Spaces...
