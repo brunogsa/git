@@ -43,3 +43,6 @@
 [submodule ".vim/bundle/linediff.vim"]
 	path = .vim/bundle/linediff.vim
 	url = https://github.com/AndrewRadev/linediff.vim
+[submodule ".vim/bundle/vim-super-retab"]
+	path = .vim/bundle/vim-super-retab
+	url = https://github.com/rhlobo/vim-super-retab
