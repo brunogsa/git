@@ -45,7 +45,6 @@ set softtabstop=4
 set shiftround
 set smarttab
 set wrap
-autocmd FilterWritePre * if &diff | setlocal wrap< | endif	" Automatically set wrap when starting a vim diff
 set mouse=n
 
 " Tab vs Spaces...
@@ -64,7 +63,7 @@ set scrolloff=5
 vmap <Enter> <Plug>(EasyAlign)
 
 " You can format XML (1 by 1) via visual mode clicking on "\x"
-map <leader>x :!xmllint --format --recover - 2>/dev/null<cr>
+map <silent> <leader>x :!xmllint --format --recover - 2>/dev/null<cr>
 
 " ===============================================
 " Folding
@@ -130,11 +129,19 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 1
-let g:syntastic_javascript_checkers=['jshint', 'jscs']
-let syntastic_aggregate_errors=1
+let g:syntastic_loc_list_height = 3
+let g:syntastic_always_populate_loc_list = 1
+
+let g:syntastic_mode_map = { "mode": "passive" }
+let syntastic_aggregate_errors = 1
+
+let g:syntastic_javascript_checkers = ['jshint', 'jscs']
+
+" ===============================================
+" Run Time Features
+" ===============================================
+autocmd FilterWritePre * if &diff | setlocal wrap< | endif	" Automatically set wrap when starting a vim diff
+map <silent> <leader>de ggVG=gg:Space2Tab<cr>gg		" Use this to turn both diffs into the same form
 
 " ===============================================
