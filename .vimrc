@@ -114,6 +114,14 @@ map b 0
 map <silent> <leader>v :set paste<cr>"+p:set nopaste<cr>
 
 " ===============================================
+" Status Line
+" ===============================================
+set statusline=
+set statusline+=%1*\ %<%f\                                "File+path"
+set statusline+=%8*\ %=\ %l/%L\ (%01p%%)\             "Rownumber/total (%)
+set statusline+=%9*\ col:%01c\                            "Colnr
+
+" ===============================================
 " Hotkeys
 " ===============================================
 map <silent> <leader><leader> <leader>c<space>
@@ -123,7 +131,7 @@ map <F5> :source ~/.vimrc<cr>
 map <S-Tab> :NERDTreeToggle<CR>
 
 " ===============================================
-" Run Time Features
+" Syntastic
 " ===============================================
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
