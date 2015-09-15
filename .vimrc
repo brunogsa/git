@@ -148,8 +148,3 @@ autocmd FilterWritePre * if &diff | setlocal wrap< | endif	" Automatically set w
 map <silent> <leader>de ggVG=gg:Space2Tab<cr>gg		" Use this to turn both diffs into the same form
 
 " ===============================================
-" Tailf
-" ===============================================
-let g:Tail_Height = 1
-
-" ===============================================
