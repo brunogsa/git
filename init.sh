@@ -1,7 +1,10 @@
 #!/bin/bash
 sudo rm -fr ~/.vim
-ln -sf ~/vim/.vim ~/.vim
-ln -sf ~/vim/.vimrc ~/.vimrc
+sudo rm -fr /root/.vim
+sudo ln -sf ~/vim/.vim ~/.vim
+sudo ln -sf ~/vim/.vimrc ~/.vimrc
+sudo ln -sf ~/vim/.vim /root/.vim
+sudo ln -sf ~/vim/.vimrc /root/.vimrc
 git submodule init
 git submodule update
 cd .vim/bundle/tern_for_vim/
