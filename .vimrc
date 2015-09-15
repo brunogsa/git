@@ -8,12 +8,6 @@ filetype plugin indent on
 filetype on
 
 " ===============================================
-" Encode issues
-" ===============================================
-let $LANG='en'
-set langmenu=en
-
-" ===============================================
 " Efficient vim
 " ===============================================
 set lazyredraw
@@ -152,5 +146,10 @@ let g:syntastic_javascript_checkers = ['jshint', 'jscs']
 " ===============================================
 autocmd FilterWritePre * if &diff | setlocal wrap< | endif	" Automatically set wrap when starting a vim diff
 map <silent> <leader>de ggVG=gg:Space2Tab<cr>gg		" Use this to turn both diffs into the same form
+
+" ===============================================
+" Tailf
+" ===============================================
+let g:Tail_Height = 1
 
 " ===============================================
