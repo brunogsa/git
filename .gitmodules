@@ -4,9 +4,6 @@
 [submodule ".vim/bundle/gruvbox"]
 	path = .vim/bundle/gruvbox
 	url = https://github.com/morhetz/gruvbox
-[submodule ".vim/bundle/LargeFile"]
-	path = .vim/bundle/LargeFile
-	url = https://github.com/vim-scripts/LargeFile
 [submodule ".vim/bundle/nerdcommenter"]
 	path = .vim/bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter
@@ -22,9 +19,6 @@
 [submodule ".vim/bundle/vim-diff-enhanced"]
 	path = .vim/bundle/vim-diff-enhanced
 	url = https://github.com/chrisbra/vim-diff-enhanced
-[submodule ".vim/bundle/vim-mark"]
-	path = .vim/bundle/vim-mark
-	url = https://github.com/Yggdroot/vim-mark
 [submodule ".vim/bundle/vim-maximizer"]
 	path = .vim/bundle/vim-maximizer
 	url = https://github.com/szw/vim-maximizer
@@ -34,15 +28,21 @@
 [submodule ".vim/bundle/nerdtree"]
 	path = .vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree
-[submodule ".vim/bundle/vim-easy-align"]
-	path = .vim/bundle/vim-easy-align
-	url = https://github.com/junegunn/vim-easy-align
 [submodule ".vim/bundle/syntastic"]
 	path = .vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic
 [submodule ".vim/bundle/linediff.vim"]
 	path = .vim/bundle/linediff.vim
 	url = https://github.com/AndrewRadev/linediff.vim
+[submodule ".vim/bundle/LargeFile"]
+	path = .vim/bundle/LargeFile
+	url = https://github.com/vim-scripts/LargeFile
+[submodule ".vim/bundle/vim-mark"]
+	path = .vim/bundle/vim-mark
+	url = https://github.com/Yggdroot/vim-mark
+[submodule ".vim/bundle/vim-easy-align"]
+	path = .vim/bundle/vim-easy-align
+	url = https://github.com/junegunn/vim-easy-align
 [submodule ".vim/bundle/vim-super-retab"]
 	path = .vim/bundle/vim-super-retab
 	url = https://github.com/rhlobo/vim-super-retab
