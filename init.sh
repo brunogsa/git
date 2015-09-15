@@ -8,6 +8,7 @@ sudo ln -sf ~/vim/.vimrc /root/.vimrc
 git submodule init
 git submodule update
 cd .vim/bundle/tern_for_vim/
+sudo apt-get install -y npm
 sudo npm update
 sudo npm install
 cd -
