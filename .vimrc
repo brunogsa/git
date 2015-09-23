@@ -105,7 +105,6 @@ map <silent> <Up> gk
 map <silent> <Right> l
 map e $
 map b 0
-map <silent> <leader>v :set paste<cr>"+p:set nopaste<cr>
 
 " ===============================================
 " Status Line
@@ -123,6 +122,7 @@ map <F2> :set number!<cr>
 map <2-LeftMouse> \m
 map <F5> :source ~/.vimrc<cr>
 map <S-Tab> :NERDTreeToggle<CR>
+vnoremap // y/<C-R>"
 
 " ===============================================
 " Syntastic

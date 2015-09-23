@@ -55,3 +55,6 @@
 [submodule ".vim/bundle/Tail-Bundle"]
 	path = .vim/bundle/Tail-Bundle
 	url = https://github.com/vim-scripts/Tail-Bundle
+[submodule ".vim/bundle/vim-notes"]
+	path = .vim/bundle/vim-notes
+	url = https://github.com/xolox/vim-notes
