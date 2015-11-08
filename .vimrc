@@ -117,12 +117,15 @@ set statusline+=%9*\ col:%01c\                            "Colnr
 " ===============================================
 " Hotkeys
 " ===============================================
-map <silent> <leader><leader> <leader>c<space>
-map <F2> :set number!<cr>
-map <2-LeftMouse> \m
-map <F5> :source ~/.vimrc<cr>
-map <S-Tab> :NERDTreeToggle<CR>
-vnoremap // y/<C-R>"
+map <Silent> <Leader><Leader> <Leader>c<Space>
+map <Silent> <F2> :set number!<Cr>
+map <Silent> <2-LeftMouse> \m
+map <Silent> <F5> :source ~/.vimrc<Cr>
+map <Silent> <S-Tab> :NERDTreeToggle<Cr>
+map <silent> <Leader><Up> :resize +5<Cr>
+map <silent> <Leader><Down> :resize -5<Cr>
+map <silent> <Leader><Left> :vertical resize +5<Cr>
+map <silent> <Leader><Right> :vertical resize -5<Cr>
 
 " ===============================================
 " Syntastic
