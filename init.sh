@@ -12,7 +12,6 @@ sudo apt-get install -y npm
 sudo npm update
 sudo npm install
 cd -
-.vim/bundle/fonts/install.sh
 
 echo "@@@ You probably want to install some Syntax Checkers, so syntastic plugin can really work."
 echo "@@@ For more details: https://github.com/scrooloose/syntastic/wiki/Syntax-Checkers"
