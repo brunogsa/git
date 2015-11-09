@@ -2,6 +2,9 @@
 " Ease plugin management
 " ===============================================
 set nocompatible
+set encoding=utf-8
+scriptencoding utf-8
+
 call pathogen#infect()
 call pathogen#helptags()
 filetype plugin indent on
@@ -10,9 +13,7 @@ filetype on
 " ===============================================
 " Efficient vim
 " ===============================================
-set lazyredraw
 set autoread
-set ruler
 set title
 set backspace=indent,eol,start
 set clipboard=unnamedplus
@@ -48,16 +49,10 @@ set mouse=n
 " Style
 " ===============================================
 set background=dark
-colorscheme gruvbox
+colorscheme jellybeans
 set lbr
 set tw=250
 set scrolloff=5
-
-" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
-vmap <Enter> <Plug>(EasyAlign)
-
-" You can format XML (1 by 1) via visual mode clicking on "\x"
-map <silent> <leader>x :!xmllint --format --recover - 2>/dev/null<cr>
 
 " ===============================================
 " Folding
@@ -109,23 +104,43 @@ map b 0
 " ===============================================
 " Status Line
 " ===============================================
-set statusline=
-set statusline+=%1*\ %<%f\                                "File+path"
-set statusline+=%8*\ %=\ %l/%L\ (%01p%%)\             "Rownumber/total (%)
-set statusline+=%9*\ col:%01c\                            "Colnr
+set noruler
+set laststatus=2
+
+let g:lightline = {
+      \ 'colorscheme': 'seoul256',
+      \ 'component': {
+      \   'readonly': '%{&readonly?"READ-ONLY":""}',
+      \ },
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '|', 'right': '|' }
+      \ }
+
+" Uses vim colorscheme and gnome-terminal transparency
+if $COLORTERM == 'gnome-terminal'
+	set t_Co=256
+	hi Normal ctermbg=none
+	highlight NonText ctermbg=none
+endif
 
 " ===============================================
 " Hotkeys
 " ===============================================
-map <Silent> <Leader><Leader> <Leader>c<Space>
-map <Silent> <F2> :set number!<Cr>
-map <Silent> <2-LeftMouse> \m
-map <Silent> <F5> :source ~/.vimrc<Cr>
-map <Silent> <S-Tab> :NERDTreeToggle<Cr>
-map <silent> <Leader><Up> :resize +5<Cr>
-map <silent> <Leader><Down> :resize -5<Cr>
-map <silent> <Leader><Left> :vertical resize +5<Cr>
-map <silent> <Leader><Right> :vertical resize -5<Cr>
+map <Leader><Leader> <Leader>c<Space>
+map <F2> :set number!<Cr>
+map <2-LeftMouse> \m
+map <F5> :source ~/.vimrc<Cr>
+map <S-Tab> :NERDTreeToggle<Cr>
+map <Leader><Up> :resize +5<Cr>
+map <Leader><Down> :resize -5<Cr>
+map <Leader><Left> :vertical resize +5<Cr>
+map <Leader><Right> :vertical resize -5<Cr>
+
+" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
+vmap <Enter> <Plug>(EasyAlign)
+
+" You can format XML (1 by 1) via visual mode clicking on "\x"
+map <silent> <leader>x :!xmllint --format --recover - 2>/dev/null<cr>
 
 " ===============================================
 " Syntastic
@@ -148,6 +163,5 @@ let g:syntastic_javascript_checkers = ['jshint', 'jscs']
 " Run Time Features
 " ===============================================
 autocmd FilterWritePre * if &diff | setlocal wrap< | endif	" Automatically set wrap when starting a vim diff
-map <silent> <leader>de ggVG=gg:Space2Tab<cr>gg		" Use this to turn both diffs into the same form
 
 " ===============================================
