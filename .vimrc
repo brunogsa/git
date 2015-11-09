@@ -54,6 +54,29 @@ set lbr
 set tw=250
 set scrolloff=5
 
+" Status Line
+set noruler
+set laststatus=2
+
+let g:lightline = {
+      \ 'colorscheme': 'seoul256',
+      \ 'component': {
+      \   'readonly': '%{&readonly?"READ-ONLY":""}',
+      \ },
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '|', 'right': '|' }
+      \ }
+
+" Uses vim colorscheme and gnome-terminal transparency
+if $COLORTERM == 'gnome-terminal'
+	set t_Co=256
+	hi Normal ctermbg=none
+	highlight NonText ctermbg=none
+endif
+
+" Highlight cursor column
+set cursorcolumn
+
 " ===============================================
 " Folding
 " ===============================================
@@ -100,28 +123,6 @@ map <silent> <Up> gk
 map <silent> <Right> l
 map e $
 map b 0
-
-" ===============================================
-" Status Line
-" ===============================================
-set noruler
-set laststatus=2
-
-let g:lightline = {
-      \ 'colorscheme': 'seoul256',
-      \ 'component': {
-      \   'readonly': '%{&readonly?"READ-ONLY":""}',
-      \ },
-      \ 'separator': { 'left': '', 'right': '' },
-      \ 'subseparator': { 'left': '|', 'right': '|' }
-      \ }
-
-" Uses vim colorscheme and gnome-terminal transparency
-if $COLORTERM == 'gnome-terminal'
-	set t_Co=256
-	hi Normal ctermbg=none
-	highlight NonText ctermbg=none
-endif
 
 " ===============================================
 " Hotkeys
