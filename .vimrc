@@ -136,7 +136,7 @@ map <Leader><Up> :resize +5<Cr>
 map <Leader><Down> :resize -5<Cr>
 map <Leader><Left> :vertical resize +5<Cr>
 map <Leader><Right> :vertical resize -5<Cr>
-vnoremap <M-/> <Esc>/\%V
+vnoremap <Leader>/ <Esc>/\%V
 
 " Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
 vmap <Enter> <Plug>(EasyAlign)
