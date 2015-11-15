@@ -68,11 +68,9 @@ let g:lightline = {
       \ }
 
 " Uses vim colorscheme and gnome-terminal transparency
-if $COLORTERM == 'gnome-terminal'
-	set t_Co=256
-	hi Normal ctermbg=none
-	highlight NonText ctermbg=none
-endif
+set t_Co=256
+hi Normal ctermbg=none
+highlight NonText ctermbg=none
 
 " Highlight cursor column
 set cursorcolumn
