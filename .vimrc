@@ -94,7 +94,6 @@ let xml_syntax_folding=1      " XML
 " Search system
 " ===============================================
 set incsearch
-set ignorecase
 set smartcase
 
 " ===============================================
@@ -111,6 +110,10 @@ set wildmenu
 set completeopt=longest,menu
 set complete-=i
 let g:SuperTabDefaultCompletionType = "context"
+
+" Rebinds cmdline-complete hotkeys
+cmap <Tab> <Plug>CmdlineCompleteForward
+
 
 " ===============================================
 " Remaps
@@ -129,7 +132,7 @@ map <Leader><Leader> <Leader>c<Space>
 map <F2> :set number!<Cr>
 map <2-LeftMouse> \m
 map <F5> :source ~/.vimrc<Cr>
-map <S-Tab> :NERDTreeToggle<Cr>
+map <F6> :NERDTreeToggle<Cr>
 map <Leader><Up> :resize +5<Cr>
 map <Leader><Down> :resize -5<Cr>
 map <Leader><Left> :vertical resize +5<Cr>
