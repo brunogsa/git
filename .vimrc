@@ -111,10 +111,6 @@ set completeopt=longest,menu
 set complete-=i
 let g:SuperTabDefaultCompletionType = "context"
 
-" Rebinds cmdline-complete hotkeys
-cmap <Tab> <Plug>CmdlineCompleteForward
-
-
 " ===============================================
 " Remaps
 " ===============================================
