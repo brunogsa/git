@@ -49,10 +49,11 @@ set mouse=n
 " Style
 " ===============================================
 set background=dark
-colorscheme jellybeans
+colorscheme monokai
 set lbr
 set tw=250
 set scrolloff=5
+hi MatchParen cterm=bold ctermbg=lightblue ctermfg=black
 
 " Status Line
 set noruler
@@ -187,6 +188,11 @@ let g:syntastic_mode_map = { "mode": "passive" }
 let syntastic_aggregate_errors = 1
 
 let g:syntastic_javascript_checkers = ['jshint', 'jscs']
+
+" ===============================================
+" Delimit Mate Options
+" ===============================================
+let delimitMate_matchpairs = "(:),[:],{:}"
 
 " ===============================================
 " Run Time Features

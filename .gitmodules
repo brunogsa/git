@@ -22,9 +22,6 @@
 [submodule ".vim/bundle/vim-repeat"]
 	path = .vim/bundle/vim-repeat
 	url = https://github.com/tpope/vim-repeat
-[submodule ".vim/bundle/nerdtree"]
-	path = .vim/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree
 [submodule ".vim/bundle/syntastic"]
 	path = .vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic
@@ -52,3 +49,12 @@
 [submodule "vim-indexed-search"]
 	path = .vim/bundle/vim-indexed-search
 	url = https://github.com/brunogsa/vim-indexed-search
+[submodule ".vim/bundle/open-browser.vim"]
+	path = .vim/bundle/open-browser.vim
+	url = https://github.com/tyru/open-browser.vim
+[submodule ".vim/bundle/MatchTagAlways"]
+	path = .vim/bundle/MatchTagAlways
+	url = https://github.com/Valloric/MatchTagAlways
+[submodule ".vim/bundle/vim-closetag"]
+	path = .vim/bundle/vim-closetag
+	url = https://github.com/alvan/vim-closetag
