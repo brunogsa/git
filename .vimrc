@@ -42,6 +42,11 @@ set smarttab
 set wrap
 set mouse=n
 
+" Indetation for HTML
+let g:html_indent_script1 = "inc"
+let g:html_indent_style1 = "inc"
+let g:html_indent_inctags = "html,body,head"
+
 " Tab vs Spaces...
 " set expandtab
 
