@@ -26,7 +26,8 @@ let g:LargeFile=0.5
 
 " Auto reloading/saving vim
 set autoread
-au CursorMoved,CursorMovedI * checktime
+set updatetime=1000
+au CursorMoved,CursorMovedI,CursorHold,CursorHoldI * checktime
 
 " ===============================================
 " Identation config
