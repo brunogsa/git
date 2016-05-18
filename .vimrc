@@ -13,7 +13,6 @@ filetype on
 " ===============================================
 " Efficient vim
 " ===============================================
-set autoread
 set title
 set backspace=indent,eol,start
 set clipboard=unnamedplus
@@ -24,6 +23,10 @@ set nowritebackup
 set noswapfile
 set viminfo^=%
 let g:LargeFile=0.5
+
+" Auto reloading/saving vim
+set autoread
+au CursorMoved,CursorMovedI * checktime
 
 " ===============================================
 " Identation config
