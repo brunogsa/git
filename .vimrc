@@ -7,7 +7,8 @@ scriptencoding utf-8
 
 call pathogen#infect()
 call pathogen#helptags()
-filetype plugin indent on
+filetype indent on
+filetype plugin on
 filetype on
 
 " ===============================================
@@ -69,13 +70,13 @@ set noruler
 set laststatus=2
 
 let g:lightline = {
-      \ 'colorscheme': 'seoul256',
-      \ 'component': {
-      \   'readonly': '%{&readonly?"READ-ONLY":""}',
-      \ },
-      \ 'separator': { 'left': '', 'right': '' },
-      \ 'subseparator': { 'left': '|', 'right': '|' }
-      \ }
+	  \ 'colorscheme': 'seoul256',
+	  \ 'component': {
+	  \   'readonly': '%{&readonly?"READ-ONLY":""}',
+	  \ },
+	  \ 'separator': { 'left': '', 'right': '' },
+	  \ 'subseparator': { 'left': '|', 'right': '|' }
+	  \ }
 
 " Uses vim colorscheme and gnome-terminal transparency
 set t_Co=256
@@ -146,41 +147,54 @@ map <Leader><Left> :vertical resize +5<Cr>
 map <Leader><Right> :vertical resize -5<Cr>
 vnoremap <Leader>/ <Esc>/\%V
 
+" ===============================================
+" Easy Align
+" ===============================================
+
 " Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
 vmap <Enter> <Plug>(EasyAlign)
 
+" ===============================================
+" Pretty XML
+" ===============================================
+function! DoPrettyXML()
+	" save the filetype so we can restore it later
+	let l:origft = &ft
+	set ft=
+
+	" delete the xml header if it exists. This will
+	" permit us to surround the document with fake tags
+	" without creating invalid xml.
+	1s/<?xml .*?>//e
+
+	" insert fake tags around the entire document.
+	" This will permit us to pretty-format excerpts of
+	" XML that may contain multiple top-level elements.
+	0put ='<PrettyXML>'
+	$put ='</PrettyXML>'
+	silent %!xmllint --format -
+
+	" xmllint will insert an <?xml?> header. it's easy enough to delete
+	" if you don't want it.
+	" delete the fake tags
+	2d
+	$d
+
+	" restore the 'normal' indentation, which is one extra level
+	" too deep due to the extra tags we wrapped around the document.
+	silent %<
+
+	" back to home
+	1
+
+	" restore the filetype
+	exe "set ft=" . l:origft
+endfunction
+
+command! PrettyXML call DoPrettyXML()
+
 " You can format XML (1 by 1) via visual mode clicking on "\x"
 map <silent> <leader>x :!xmllint --format --recover - 2>/dev/null<cr>
-
-" You can ident XML with this
-function! DoPrettyXML()
-  " save the filetype so we can restore it later
-  let l:origft = &ft
-  set ft=
-  " delete the xml header if it exists. This will
-  " permit us to surround the document with fake tags
-  " without creating invalid xml.
-  1s/<?xml .*?>//e
-  " insert fake tags around the entire document.
-  " This will permit us to pretty-format excerpts of
-  " XML that may contain multiple top-level elements.
-  0put ='<PrettyXML>'
-  $put ='</PrettyXML>'
-  silent %!xmllint --format -
-  " xmllint will insert an <?xml?> header. it's easy enough to delete
-  " if you don't want it.
-  " delete the fake tags
-  2d
-  $d
-  " restore the 'normal' indentation, which is one extra level
-  " too deep due to the extra tags we wrapped around the document.
-  silent %<
-  " back to home
-  1
-  " restore the filetype
-  exe "set ft=" . l:origft
-endfunction
-command! PrettyXML call DoPrettyXML()
 
 " ===============================================
 " Syntastic
@@ -218,23 +232,23 @@ au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
 let g:rbpt_colorpairs = [
-    \ ['brown',       'RoyalBlue3'],
-    \ ['Darkblue',    'SeaGreen3'],
-    \ ['darkgray',    'DarkOrchid3'],
-    \ ['darkgreen',   'firebrick3'],
-    \ ['darkcyan',    'RoyalBlue3'],
-    \ ['darkred',     'SeaGreen3'],
-    \ ['darkmagenta', 'DarkOrchid3'],
-    \ ['brown',       'firebrick3'],
-    \ ['gray',        'RoyalBlue3'],
-    \ ['black',       'SeaGreen3'],
-    \ ['darkmagenta', 'DarkOrchid3'],
-    \ ['Darkblue',    'firebrick3'],
-    \ ['darkgreen',   'RoyalBlue3'],
-    \ ['darkcyan',    'SeaGreen3'],
-    \ ['darkred',     'DarkOrchid3'],
-    \ ['red',         'firebrick3'],
-    \ ]
+	\ ['brown',       'RoyalBlue3'],
+	\ ['Darkblue',    'SeaGreen3'],
+	\ ['darkgray',    'DarkOrchid3'],
+	\ ['darkgreen',   'firebrick3'],
+	\ ['darkcyan',    'RoyalBlue3'],
+	\ ['darkred',     'SeaGreen3'],
+	\ ['darkmagenta', 'DarkOrchid3'],
+	\ ['brown',       'firebrick3'],
+	\ ['gray',        'RoyalBlue3'],
+	\ ['black',       'SeaGreen3'],
+	\ ['darkmagenta', 'DarkOrchid3'],
+	\ ['Darkblue',    'firebrick3'],
+	\ ['darkgreen',   'RoyalBlue3'],
+	\ ['darkcyan',    'SeaGreen3'],
+	\ ['darkred',     'DarkOrchid3'],
+	\ ['red',         'firebrick3'],
+	\ ]
 
 let g:rbpt_max = 16
 let g:rbpt_loadcmd_toggle = 0

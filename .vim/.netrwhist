@@ -1,5 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/home/bagostini/.vim'
 let g:netrw_dirhist_2='/home/brunogsa/coursera/full-dev-specialization/html-css-javascript'
 let g:netrw_dirhist_3='/home/brunogsa/vim/.vim/syntax'
+let g:netrw_dirhist_4='/home/bagostini/research/webclient'
+let g:netrw_dirhist_5='/home/bagostini/research/webclient/app'
+let g:netrw_dirhist_6='/home/bagostini/research/webclient/app/views'
+let g:netrw_dirhist_7='/home/bagostini/research/webclient/app/views/dialogs'

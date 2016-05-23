@@ -10,7 +10,12 @@ git submodule update
 cd .vim/bundle/tern_for_vim/
 sudo apt-get install -y npm
 sudo npm update
-sudo npm install
+npm install
+#cd .vim/bundle/YouCompleteMe/
+#git submodule update --init  --recursive
+#sudo apt-get install -y build-essential cmake
+#sudo apt-get install -y python-dev python3-dev
+#./install.py --tern-completer
 cd -
 sudo apt-get update
 sudo apt-get install -y vim-athena
