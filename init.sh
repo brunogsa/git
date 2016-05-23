@@ -19,6 +19,7 @@ npm install
 cd -
 sudo apt-get update
 sudo apt-get install -y vim-athena
+sudo apt-get install -y exuberant-ctags
 
 echo "@@@ You probably want to install some Syntax Checkers, so syntastic plugin can really work."
 echo "@@@ For more details: https://github.com/scrooloose/syntastic/wiki/Syntax-Checkers"

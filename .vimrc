@@ -25,7 +25,7 @@ set noswapfile
 set viminfo^=%
 let g:LargeFile=0.5
 
-" Auto reloading/saving vim
+" Auto reloading
 set autoread
 set updatetime=1000
 au CursorMoved,CursorMovedI,CursorHold,CursorHoldI * checktime
@@ -120,8 +120,16 @@ set splitright
 set wildmode=longest,list
 set wildmenu
 set completeopt=longest,menu
-set complete-=i
+
 let g:SuperTabDefaultCompletionType = "context"
+
+" Make CTRL+Space to Omnicomplete
+inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
+\ "\<lt>C-n>" :
+\ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
+\ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
+\ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
+imap <C-@> <C-Space>
 
 " ===============================================
 " Remaps
@@ -222,6 +230,11 @@ let delimitMate_matchpairs = "(:),[:],{:}"
 " Run Time Features
 " ===============================================
 autocmd FilterWritePre * if &diff | setlocal wrap< | endif	" Automatically set wrap when starting a vim diff
+
+" ===============================================
+" Tag Bar
+" ===============================================
+nmap <F8> :TagbarToggle<CR>
 
 " ===============================================
 " Rainbow Parentheses
