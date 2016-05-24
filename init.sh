@@ -1,6 +1,7 @@
 #!/bin/bash
 sudo rm -fr ~/.vim
 sudo rm -fr /root/.vim
+sudo ln -sf ~/vim/.ctags ~/.ctags
 sudo ln -sf ~/vim/.vim ~/.vim
 sudo ln -sf ~/vim/.vimrc ~/.vimrc
 sudo ln -sf ~/vim/.vim /root/.vim

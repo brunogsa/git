@@ -132,7 +132,7 @@ inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
 imap <C-@> <C-Space>
 
 " ===============================================
-" Remaps
+" Hotkeys
 " ===============================================
 map <silent> <Left> h
 map <silent> <Down> gj
@@ -140,20 +140,18 @@ map <silent> <Up> gk
 map <silent> <Right> l
 map e $
 map b 0
-
-" ===============================================
-" Hotkeys
-" ===============================================
-map <Leader><Leader> <Leader>c<Space>
 map <F2> :set number!<Cr>
-map <2-LeftMouse> \m
 map <F5> :source ~/.vimrc<Cr>
-map <F6> :NERDTreeToggle<Cr>
 map <Leader><Up> :resize +5<Cr>
 map <Leader><Down> :resize -5<Cr>
 map <Leader><Left> :vertical resize +5<Cr>
 map <Leader><Right> :vertical resize -5<Cr>
 vnoremap <Leader>/ <Esc>/\%V
+
+" ===============================================
+" Easy Mark
+" ===============================================
+map <2-LeftMouse> \m
 
 " ===============================================
 " Easy Align
@@ -235,6 +233,16 @@ autocmd FilterWritePre * if &diff | setlocal wrap< | endif	" Automatically set w
 " Tag Bar
 " ===============================================
 nmap <F8> :TagbarToggle<CR>
+
+" ===============================================
+" Easy Motion
+" ===============================================
+nmap s <Plug>(easymotion-s)
+
+" ===============================================
+" Nerd Commenter
+" ===============================================
+map <Leader><Leader> <Leader>c<Space>
 
 " ===============================================
 " Rainbow Parentheses
