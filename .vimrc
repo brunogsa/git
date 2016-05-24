@@ -240,11 +240,6 @@ nmap <F8> :TagbarToggle<CR>
 nmap s <Plug>(easymotion-s)
 
 " ===============================================
-" Nerd Commenter
-" ===============================================
-map <Leader><Leader> <Leader>c<Space>
-
-" ===============================================
 " Rainbow Parentheses
 " ===============================================
 au VimEnter * RainbowParenthesesToggle
