@@ -117,6 +117,7 @@ set splitright
 " ===============================================
 " Tab complete options
 " ===============================================
+set omnifunc=syntaxcomplete#Complete
 set wildmode=longest,list
 set wildmenu
 set completeopt=longest,menu
