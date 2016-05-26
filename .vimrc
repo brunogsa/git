@@ -1,38 +1,74 @@
 " ===============================================
-" Ease plugin management
+" Core Settings
 " ===============================================
+
+" Avoid issues with older versions from vim
 set nocompatible
+
+" Avoid issues with UTF-8
 set encoding=utf-8
 scriptencoding utf-8
 
+" Use pathogen as my plugin manager
 call pathogen#infect()
 call pathogen#helptags()
+
+" Turn on syntax, indent and plugins
 filetype indent on
 filetype plugin on
 filetype on
 
-" ===============================================
-" Efficient vim
-" ===============================================
-set title
-set backspace=indent,eol,start
-set clipboard=unnamed,unnamedplus
-set cursorline
-set showmatch
-set nobackup
-set nowritebackup
-set noswapfile
-set viminfo^=%
-let g:LargeFile=0.5
+" Automatically set wrap when starting a vim diff
+autocmd FilterWritePre * if &diff | setlocal wrap< | endif
 
-" Auto reloading
+" Auto reload vim
 set autoread
 set updatetime=1000
 au CursorMoved,CursorMovedI,CursorHold,CursorHoldI * checktime
 
-" ===============================================
-" Identation config
-" ===============================================
+" Fold options. I prefer fold by identation
+set foldmethod=indent
+set foldlevelstart=2
+set list lcs=tab:\┆\ 
+
+" Search options
+set incsearch
+set smartcase
+
+" Split options
+set splitbelow
+set splitright
+
+" Completion options
+set omnifunc=syntaxcomplete#Complete
+set wildmode=longest,list
+set wildmenu
+set completeopt=longest,menu
+
+" Set vim title automatically
+set title
+
+" Make backspace as expected
+set backspace=indent,eol,start
+
+" Share clipboard with system
+set clipboard=unnamed,unnamedplus
+
+" Add a line above the cursor
+set cursorline
+
+" No annoying backup files
+set nobackup
+set nowritebackup
+set noswapfile
+
+set showmatch
+set viminfo^=%
+
+" Mouse only works on Normal Mode
+set mouse=n
+
+" Indentation options
 syntax on
 set autoindent
 set smartindent
@@ -45,18 +81,14 @@ set softtabstop=4
 set shiftround
 set smarttab
 set wrap
-set mouse=n
 
-" Indetation for HTML
+" Indentation for HTML
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
 let g:html_indent_inctags = "html,body,head"
 
-" Tab vs Spaces...
-" set expandtab
-
 " ===============================================
-" Style
+" Interface
 " ===============================================
 set background=dark
 colorscheme monokai
@@ -83,48 +115,53 @@ set t_Co=256
 hi Normal ctermbg=none
 highlight NonText ctermbg=none
 
-" Highlight cursor column
-set cursorcolumn
 
 " ===============================================
-" Folding
+" Hotkeys
 " ===============================================
-set foldmethod=indent
-set foldlevelstart=1
-set list lcs=tab:\┆\ 
 
-"let javaScript_fold=1         " JavaScript
-"let perl_fold=1               " Perl
-"let php_folding=1             " PHP
-"let r_syntax_folding=1        " R
-"let ruby_fold=1               " Ruby
-"let sh_fold_enabled=1         " sh
-"let vimsyn_folding='af'       " Vim script
-"let xml_syntax_folding=1      " XML
+" Efficient way to move through your code using the Arrow Keys
+map <silent> <Left> h
+map <silent> <Down> gj
+map <silent> <Up> gk
+map <silent> <Right> l
 
-" ===============================================
-" Search system
-" ===============================================
-set incsearch
-set smartcase
+" Remappings. 'e' goes to the end fo the line. 'b' goes to the beginning.
+map e $
+map b 0
 
-" ===============================================
-" Split window preferences
-" ===============================================
-set splitbelow
-set splitright
+" F2 toggles the number lines
+map <F2> :set number!<Cr>
 
-" ===============================================
-" Tab complete options
-" ===============================================
-set omnifunc=syntaxcomplete#Complete
-set wildmode=longest,list
-set wildmenu
-set completeopt=longest,menu
+" F5 refreshes vim. Little buggy
+map <F5> :source ~/.vimrc<Cr>
 
-let g:SuperTabDefaultCompletionType = "context"
+" '\+arrows' resize a vim pane
+map <Leader><Up> :resize +5<Cr>
+map <Leader><Down> :resize -5<Cr>
+map <Leader><Left> :vertical resize +5<Cr>
+map <Leader><Right> :vertical resize -5<Cr>
 
-" Make CTRL+Space to Omnicomplete
+" FIXME: Searching in visual block must uses only '/'
+" Press '\/' with a selected visual block, to search in that block
+vnoremap <Leader>/ <Esc>/\%V
+
+" Press 's' to search character using plugin EasyMotion
+nmap s <Plug>(easymotion-s)
+
+" Double-clicking with the LeftMouse add a coloured mark into that word. Uses the plugin EasyMark
+map <2-LeftMouse> \m
+
+" Press ENTER in a selected visual block to align it. Uses the plugin EasyAlign
+vmap <Enter> <Plug>(EasyAlign)
+
+" Format a XML line (1 by 1) via visual mode clicking on '\x'. Custom func.
+map <silent> <leader>x :!xmllint --format --recover - 2>/dev/null<cr>
+
+" Press 'F8' to toggle the Tagbar. Doesn't require a processed tag for it
+nmap <F8> :TagbarToggle<CR>
+
+" Make 'CTRL+Space' to Omnicomplete
 inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
 \ "\<lt>C-n>" :
 \ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
@@ -133,37 +170,10 @@ inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
 imap <C-@> <C-Space>
 
 " ===============================================
-" Hotkeys
-" ===============================================
-map <silent> <Left> h
-map <silent> <Down> gj
-map <silent> <Up> gk
-map <silent> <Right> l
-map e $
-map b 0
-map <F2> :set number!<Cr>
-map <F5> :source ~/.vimrc<Cr>
-map <Leader><Up> :resize +5<Cr>
-map <Leader><Down> :resize -5<Cr>
-map <Leader><Left> :vertical resize +5<Cr>
-map <Leader><Right> :vertical resize -5<Cr>
-vnoremap <Leader>/ <Esc>/\%V
-
-" ===============================================
-" Easy Mark
-" ===============================================
-map <2-LeftMouse> \m
-
-" ===============================================
-" Easy Align
+" My Functions
 " ===============================================
 
-" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
-vmap <Enter> <Plug>(EasyAlign)
-
-" ===============================================
-" Pretty XML
-" ===============================================
+" PrettyXML: Formats a line of unformatted XML for you
 function! DoPrettyXML()
 	" save the filetype so we can restore it later
 	let l:origft = &ft
@@ -200,12 +210,12 @@ endfunction
 
 command! PrettyXML call DoPrettyXML()
 
-" You can format XML (1 by 1) via visual mode clicking on "\x"
-map <silent> <leader>x :!xmllint --format --recover - 2>/dev/null<cr>
+" ===============================================
+" Plugin Configs
+" ===============================================
 
-" ===============================================
-" Syntastic
-" ===============================================
+" syntastic
+" =============== 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -220,54 +230,43 @@ let syntastic_aggregate_errors = 1
 
 let g:syntastic_javascript_checkers = ['jshint', 'jscs']
 
-" ===============================================
-" Delimit Mate Options
-" ===============================================
+
+" vim-javascript
+" =============== 
+let g:javascript_enable_domhtmlcss = 1
+let g:javascript_ignore_javaScriptdoc = 0
+
+
+" vim-css3-syntax
+" =============== 
+setlocal iskeyword+=-
+
+augroup VimCSS3Syntax
+	autocmd!
+
+	autocmd FileType css setlocal iskeyword+=-
+augroup END
+
+
+" delimitMate
+" =============== 
 let delimitMate_matchpairs = "(:),[:],{:}"
 
-" ===============================================
-" Run Time Features
-" ===============================================
-autocmd FilterWritePre * if &diff | setlocal wrap< | endif	" Automatically set wrap when starting a vim diff
 
-" ===============================================
-" Tag Bar
-" ===============================================
-nmap <F8> :TagbarToggle<CR>
+" LargeFile
+" =============== 
+let g:LargeFile = 0.5
 
-" ===============================================
-" Easy Motion
-" ===============================================
-nmap s <Plug>(easymotion-s)
 
-" ===============================================
-" Rainbow Parentheses
-" ===============================================
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
+" supertab
+" =============== 
+let g:SuperTabDefaultCompletionType = "context"
 
-let g:rbpt_colorpairs = [
-	\ ['brown',       'RoyalBlue3'],
-	\ ['Darkblue',    'SeaGreen3'],
-	\ ['darkgray',    'DarkOrchid3'],
-	\ ['darkgreen',   'firebrick3'],
-	\ ['darkcyan',    'RoyalBlue3'],
-	\ ['darkred',     'SeaGreen3'],
-	\ ['darkmagenta', 'DarkOrchid3'],
-	\ ['brown',       'firebrick3'],
-	\ ['gray',        'RoyalBlue3'],
-	\ ['black',       'SeaGreen3'],
-	\ ['darkmagenta', 'DarkOrchid3'],
-	\ ['Darkblue',    'firebrick3'],
-	\ ['darkgreen',   'RoyalBlue3'],
-	\ ['darkcyan',    'SeaGreen3'],
-	\ ['darkred',     'DarkOrchid3'],
-	\ ['red',         'firebrick3'],
-	\ ]
 
-let g:rbpt_max = 16
-let g:rbpt_loadcmd_toggle = 0
+" vim-jsdoc
+" =============== 
+let g:jsdoc_allow_input_prompt = 1
+let g:jsdoc_input_description = 1
+
 
 " ===============================================
