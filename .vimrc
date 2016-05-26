@@ -101,15 +101,6 @@ hi MatchParen cterm=bold ctermbg=lightblue ctermfg=black
 set noruler
 set laststatus=2
 
-let g:lightline = {
-	  \ 'colorscheme': 'seoul256',
-	  \ 'component': {
-	  \   'readonly': '%{&readonly?"READ-ONLY":""}',
-	  \ },
-	  \ 'separator': { 'left': '', 'right': '' },
-	  \ 'subseparator': { 'left': '|', 'right': '|' }
-	  \ }
-
 " Uses vim colorscheme and gnome-terminal transparency
 set t_Co=256
 hi Normal ctermbg=none
@@ -267,6 +258,18 @@ let g:SuperTabDefaultCompletionType = "context"
 " =============== 
 let g:jsdoc_allow_input_prompt = 1
 let g:jsdoc_input_description = 1
+
+
+" lightline.vim
+" =============== 
+let g:lightline = {
+\ 'colorscheme': 'seoul256',
+\ 'component': {
+\   'readonly': '%{&readonly?"READ-ONLY":""}',
+\ },
+\ 'separator': { 'left': '', 'right': '' },
+\ 'subseparator': { 'left': '|', 'right': '|' }
+\ }
 
 
 " ===============================================
