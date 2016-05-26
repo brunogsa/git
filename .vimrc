@@ -106,6 +106,10 @@ set t_Co=256
 hi Normal ctermbg=none
 highlight NonText ctermbg=none
 
+" Highlight some special characters: ;.,:{}()/[]<>
+highlight SpecialChars cterm=bold
+match SpecialChars /;\|,\|\.\|:\|{\|}\|(\|)\|\/\|[\|]\|<\|>/
+
 
 " ===============================================
 " Hotkeys
