@@ -272,6 +272,13 @@ let delimitMate_matchpairs = "(:),[:],{:}"
 let g:LargeFile = 0.5
 
 
+" ultisnips
+" =============== 
+let g:UltiSnipsExpandTrigger="<C-e>"
+let g:UltiSnipsJumpForwardTrigger="<C-e>"
+let g:UltiSnipsJumpBackwardTrigger="<C-f>"
+
+
 " supertab
 " =============== 
 let g:SuperTabDefaultCompletionType = "<c-n>"
