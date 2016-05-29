@@ -20,11 +20,13 @@ cd .vim/bundle/tern_for_vim/
 npm install
 cd -
 
-#cd .vim/bundle/YouCompleteMe/
-#git submodule update --init  --recursive
-#sudo apt-get install -y build-essential cmake
-#sudo apt-get install -y python-dev python3-dev
-#./install.py --tern-completer
+sudo npm install -g jsctags
+
+cd .vim/bundle/YouCompleteMe/
+git submodule update --init  --recursive
+sudo apt-get install -y build-essential cmake
+sudo apt-get install -y python-dev python3-dev
+./install.py --tern-completer
 
 sudo apt-get update
 sudo apt-get install -y vim-athena

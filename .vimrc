@@ -45,6 +45,9 @@ set wildmode=longest,list
 set wildmenu
 set completeopt=longest,menu
 
+" Added dictionary words on completion
+set complete+=k
+
 " Set vim title automatically
 set title
 
@@ -67,6 +70,9 @@ set viminfo^=%
 
 " Mouse only works on Normal Mode
 set mouse=n
+
+" Set spell checking to US english
+set spelllang=en_us
 
 " Indentation options
 syntax on
@@ -158,11 +164,15 @@ nmap <F8> :TagbarToggle<CR>
 
 " Make 'CTRL+Space' to Omnicomplete
 inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
-\ "\<lt>C-n>" :
-\ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
-\ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
-\ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
+	\ "\<lt>C-n>" :
+	\ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
+	\ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
+	\ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
 imap <C-@> <C-Space>
+
+" Toggle Spell Checking
+nmap <silent> <leader>s :set spell!<CR>
+
 
 " ===============================================
 " My Functions
@@ -204,6 +214,15 @@ function! DoPrettyXML()
 endfunction
 
 command! PrettyXML call DoPrettyXML()
+
+
+" SetDotFilesForJs: Generate a exhuberant ctags for you, for javascript projects
+function! JsCtag()
+	!find . -type f -iregex ".*\.js$" -not -path "./node_modules/*" -exec jsctags {} -f \; | sed '/^$/d' | sort > tags && cp ~/vim/.tern-project .
+endfunction
+
+command! JsProject call SetDotFilesForJs()
+
 
 " ===============================================
 " Plugin Configs
@@ -255,7 +274,21 @@ let g:LargeFile = 0.5
 
 " supertab
 " =============== 
-let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabDefaultCompletionType = "<c-n>"
+let g:SuperTabCrMapping = 0
+
+
+" YouCompleteMe
+" =============== 
+let g:ycm_complete_in_comments = 1
+let g:ycm_complete_in_strings = 1
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
+let g:ycm_filetype_blacklist = {}
+let g:ycm_min_num_of_chars_for_completion = 1
+let g:ycm_collect_identifiers_from_tags_files = 1
+let g:ycm_seed_identifiers_with_syntax = 1
+let g:ycm_key_list_select_completion = ['<Down>']
+let g:ycm_key_list_previous_completion = ['<Up>']
 
 
 " vim-jsdoc
@@ -267,13 +300,13 @@ let g:jsdoc_input_description = 1
 " lightline.vim
 " =============== 
 let g:lightline = {
-\ 'colorscheme': 'seoul256',
-\ 'component': {
-\   'readonly': '%{&readonly?"READ-ONLY":""}',
-\ },
-\ 'separator': { 'left': '', 'right': '' },
-\ 'subseparator': { 'left': '|', 'right': '|' }
-\ }
+	\ 'colorscheme': 'seoul256',
+	\ 'component': {
+	\   'readonly': '%{&readonly?"READ-ONLY":""}',
+	\ },
+	\ 'separator': { 'left': '', 'right': '' },
+	\ 'subseparator': { 'left': '|', 'right': '|' }
+	\ }
 
 
 " ===============================================

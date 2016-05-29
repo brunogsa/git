@@ -2,8 +2,16 @@
 	"libs": [
 		"browser",
 		"underscore",
-		"jquery"
+		"jquery",
+		"angular",
+		"ecma5",
+		"ecma6"
 	],
+
+	"loadEagerly": [
+		"*.js"
+	],
+
 	"plugins": {
 		"node": {}
 	}

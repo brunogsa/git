@@ -82,3 +82,6 @@
 [submodule ".vim/bundle/vim-jsdoc"]
 	path = .vim/bundle/vim-jsdoc
 	url = https://github.com/heavenshell/vim-jsdoc
+[submodule ".vim/bundle/YouCompleteMe"]
+	path = .vim/bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe
