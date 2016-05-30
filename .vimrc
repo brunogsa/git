@@ -217,7 +217,7 @@ command! PrettyXML call DoPrettyXML()
 
 
 " SetDotFilesForJs: Generate a exhuberant ctags for you, for javascript projects
-function! JsCtag()
+function! SetDotFilesForJs()
 	!find . -type f -iregex ".*\.js$" -not -path "./node_modules/*" -exec jsctags {} -f \; | sed '/^$/d' | sort > tags && cp ~/vim/.tern-project .
 endfunction
 
