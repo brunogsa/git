@@ -318,7 +318,13 @@ let g:lightline = {
 
 " vim-instant-markdown
 " =============== 
-let g:instant_markdown_autostart = 0
+let g:instant_markdown_autostart = 1
+
+
+" markdown-syntax
+" =============== 
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_no_default_key_mappings = 1
 
 
 " ===============================================
