@@ -27,6 +27,12 @@ git submodule update --init  --recursive
 sudo apt-get install -y build-essential cmake
 sudo apt-get install -y python-dev python3-dev
 ./install.py --tern-completer
+cd -
+
+cd .vim/bundle/vim-instant-markdown/
+sudo apt-get install -y xdg-utils
+sudo npm install -g instant-markdown-d
+cd -
 
 sudo apt-get update
 sudo apt-get install -y vim-athena
