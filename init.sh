@@ -37,6 +37,7 @@ cd -
 sudo apt-get update
 sudo apt-get install -y vim-athena
 sudo apt-get install -y exuberant-ctags
+sudo apt-get install -y libxml2-utils
 
 echo "@@@ You probably want to install some Syntax Checkers, so syntastic plugin can really work."
 echo "@@@ For more details: https://github.com/scrooloose/syntastic/wiki/Syntax-Checkers"
