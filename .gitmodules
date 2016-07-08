@@ -34,9 +34,6 @@
 [submodule ".vim/bundle/vim-mark"]
 	path = .vim/bundle/vim-mark
 	url = https://github.com/Yggdroot/vim-mark
-[submodule ".vim/bundle/vim-easy-align"]
-	path = .vim/bundle/vim-easy-align
-	url = https://github.com/junegunn/vim-easy-align
 [submodule ".vim/bundle/vim-super-retab"]
 	path = .vim/bundle/vim-super-retab
 	url = https://github.com/rhlobo/vim-super-retab
@@ -94,3 +91,6 @@
 [submodule ".vim/bundle/vim-javascript-syntax"]
 	path = .vim/bundle/vim-javascript-syntax
 	url = https://github.com/jelera/vim-javascript-syntax
+[submodule ".vim/bundle/tabular"]
+	path = .vim/bundle/tabular
+	url = https://github.com/godlygeek/tabular
