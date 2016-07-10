@@ -327,4 +327,14 @@ let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_no_default_key_mappings = 1
 
 
+" vim-move
+" =============== 
+let g:move_key_modifier = 'C'
+
+
+" NERDTree
+" =============== 
+map <F7> :NERDTreeToggle<CR>
+
+
 " ===============================================
