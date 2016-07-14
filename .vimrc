@@ -342,4 +342,10 @@ map <F7> :NERDTreeToggle<CR>
 let g:wildfire_objects = ["i'", 'i"', "i)", "i]", "i}", "it", "ii", "ip"]
 
 
+" yaifa
+" =============== 
+let g:yafa_tab_width = 4
+let g:yafa_indentation = 1
+
+
 " ===============================================

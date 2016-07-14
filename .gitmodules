@@ -130,3 +130,6 @@
 [submodule ".vim/bundle/vim-scavenger"]
 	path = .vim/bundle/vim-scavenger
 	url = https://github.com/kuoe0/vim-scavenger
+[submodule ".vim/bundle/yaifa"]
+	path = .vim/bundle/yaifa
+	url = https://github.com/raimondi/yaifa
