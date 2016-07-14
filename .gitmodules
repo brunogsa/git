@@ -127,3 +127,6 @@
 [submodule ".vim/bundle/vim-signature"]
 	path = .vim/bundle/vim-signature
 	url = https://github.com/kshenoy/vim-signature
+[submodule ".vim/bundle/vim-scavenger"]
+	path = .vim/bundle/vim-scavenger
+	url = https://github.com/kuoe0/vim-scavenger
