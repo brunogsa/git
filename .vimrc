@@ -337,4 +337,9 @@ let g:move_key_modifier = 'C'
 map <F7> :NERDTreeToggle<CR>
 
 
+" wildifire.vim
+" =============== 
+let g:wildfire_objects = ["i'", 'i"', "i)", "i]", "i}", "it", "ii", "ip"]
+
+
 " ===============================================
