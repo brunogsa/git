@@ -265,6 +265,8 @@ augroup END
 " delimitMate
 " =============== 
 let delimitMate_matchpairs = "(:),[:],{:}"
+let delimitMate_expand_cr=1
+
 
 
 " LargeFile
