@@ -136,3 +136,6 @@
 [submodule ".vim/bundle/vim-es6"]
 	path = .vim/bundle/vim-es6
 	url = https://github.com/isRuslan/vim-es6
+[submodule ".vim/bundle/vim-argumentative"]
+	path = .vim/bundle/vim-argumentative
+	url = git://github.com/PeterRincker/vim-argumentative.git

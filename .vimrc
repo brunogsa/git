@@ -350,4 +350,9 @@ let g:yafa_tab_width = 4
 let g:yafa_indentation = 1
 
 
+" vim-argumentative
+" =============== 
+nmap < <Plug>Argumentative_MoveLeft
+nmap > <Plug>Argumentative_MoveRight
+
 " ===============================================
