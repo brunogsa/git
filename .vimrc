@@ -127,102 +127,20 @@ map <silent> <Down> gj
 map <silent> <Up> gk
 map <silent> <Right> l
 
-" Remappings. 'e' goes to the end fo the line. 'b' goes to the beginning.
-map e $
-map b 0
+" ^ goes to the beginning of a line
+map ^ 0
 
 " F2 toggles the number lines
 map <F2> :set number!<Cr>
 
-" F5 refreshes vim. Little buggy
-map <F5> :source ~/.vimrc<Cr>
+" Search only in visual selection
+vnoremap / <Esc>/\%V
 
-" '\+arrows' resize a vim pane
-map <Leader><Up> :resize +5<Cr>
-map <Leader><Down> :resize -5<Cr>
-map <Leader><Left> :vertical resize +5<Cr>
-map <Leader><Right> :vertical resize -5<Cr>
+" PrettyXML: Format a line of XML
+vmap <Leader>fx :!xmllint --format --recover - 2>/dev/null<CR>
 
-" FIXME: Searching in visual block must uses only '/'
-" Press '\/' with a selected visual block, to search in that block
-vnoremap <Leader>/ <Esc>/\%V
-
-" Press 's' to search character using plugin EasyMotion
-nmap s <Plug>(easymotion-s)
-
-" Double-clicking with the LeftMouse add a coloured mark into that word. Uses the plugin EasyMark
-map <2-LeftMouse> \m
-
-" Press ENTER in a selected visual block to align it. Uses the plugin EasyAlign
-vmap <Enter> <Plug>(EasyAlign)
-
-" Format a XML line (1 by 1) via visual mode clicking on '\x'. Custom func.
-map <silent> <leader>x :!xmllint --format --recover - 2>/dev/null<cr>
-
-" Press 'F8' to toggle the Tagbar. Doesn't require a processed tag for it
-nmap <F8> :TagbarToggle<CR>
-
-" Make 'CTRL+Space' to Omnicomplete
-inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
-	\ "\<lt>C-n>" :
-	\ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
-	\ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
-	\ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
-imap <C-@> <C-Space>
-
-" Toggle Spell Checking
-nmap <silent> <leader>s :set spell!<CR>
-
-
-" ===============================================
-" My Functions
-" ===============================================
-
-" PrettyXML: Formats a line of unformatted XML for you
-function! DoPrettyXML()
-	" save the filetype so we can restore it later
-	let l:origft = &ft
-	set ft=
-
-	" delete the xml header if it exists. This will
-	" permit us to surround the document with fake tags
-	" without creating invalid xml.
-	1s/<?xml .*?>//e
-
-	" insert fake tags around the entire document.
-	" This will permit us to pretty-format excerpts of
-	" XML that may contain multiple top-level elements.
-	0put ='<PrettyXML>'
-	$put ='</PrettyXML>'
-	silent %!xmllint --format -
-
-	" xmllint will insert an <?xml?> header. it's easy enough to delete
-	" if you don't want it.
-	" delete the fake tags
-	2d
-	$d
-
-	" restore the 'normal' indentation, which is one extra level
-	" too deep due to the extra tags we wrapped around the document.
-	silent %<
-
-	" back to home
-	1
-
-	" restore the filetype
-	exe "set ft=" . l:origft
-endfunction
-
-command! PrettyXML call DoPrettyXML()
-
-
-" SetDotFilesForJs: Generate a exhuberant ctags for you, for javascript projects
-function! SetDotFilesForJs()
-	!find . -type f -iregex ".*\.js$" -not -path "./node_modules/*" -exec jsctags {} -f \; | sed '/^$/d' | sort > tags && cp ~/vim/.tern-project .
-endfunction
-
-command! JsProject call SetDotFilesForJs()
-
+" PreetyJSON: Format a line of JSON
+vmap <Leader>fj :!python -m json.tool<CR>
 
 " ===============================================
 " Plugin Configs
@@ -266,7 +184,6 @@ augroup END
 " =============== 
 let delimitMate_matchpairs = "(:),[:],{:}"
 let delimitMate_expand_cr=1
-
 
 
 " LargeFile
@@ -329,6 +246,13 @@ let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_no_default_key_mappings = 1
 
 
+" vim-mark
+" =============== 
+
+" Double-clicking with the LeftMouse add a coloured mark into that word. Uses the plugin EasyMark
+map <2-LeftMouse> \m
+
+
 " vim-move
 " =============== 
 let g:move_key_modifier = 'C'
@@ -339,9 +263,15 @@ let g:move_key_modifier = 'C'
 map <F7> :NERDTreeToggle<CR>
 
 
-" wildifire.vim
+" wildfire.vim
 " =============== 
-let g:wildfire_objects = ["i'", 'i"', "i)", "i]", "i}", "it", "ii", "ip"]
+let g:wildfire_objects = ["iw", "i'", 'i"', "i)", "i]", "i}", "it", "ii", "ip"]
+
+" This selects the next closest text object.
+map <Space> <Plug>(wildfire-fuel)
+
+" This selects the previous closest text object.
+vmap <Backspace> <Plug>(wildfire-water)
 
 
 " yaifa
@@ -354,5 +284,19 @@ let g:yafa_indentation = 1
 " =============== 
 nmap < <Plug>Argumentative_MoveLeft
 nmap > <Plug>Argumentative_MoveRight
+
+
+" vim-easymotion
+" =============== 
+
+" Press 's' to search character using plugin EasyMotion
+nmap s <Plug>(easymotion-s)
+
+
+" tagbar
+" =============== 
+
+" Press 'F8' to toggle the Tagbar. Doesn't require a processed tag for it
+nmap <F8> :TagbarToggle<CR>
 
 " ===============================================

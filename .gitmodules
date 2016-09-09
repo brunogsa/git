@@ -142,3 +142,9 @@
 [submodule ".vim/bundle/vim-narrow"]
 	path = .vim/bundle/vim-narrow
 	url = https://github.com/jkramer/vim-narrow
+[submodule ".vim/bundle/rename.vim"]
+	path = .vim/bundle/rename.vim
+	url = https://github.com/danro/rename.vim
+[submodule ".vim/bundle/SwapText"]
+	path = .vim/bundle/SwapText
+	url = https://github.com/vim-scripts/SwapText
