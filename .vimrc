@@ -127,8 +127,9 @@ map <silent> <Down> gj
 map <silent> <Up> gk
 map <silent> <Right> l
 
-" ^ goes to the beginning of a line
-map ^ 0
+" 'b' goes to the beginning of a line. 'e' to the end of the line.
+map b 0
+map e $
 
 " F2 toggles the number lines
 map <F2> :set number!<Cr>
@@ -180,10 +181,25 @@ augroup VimCSS3Syntax
 augroup END
 
 
+" nerdcommenter
+" =============== 
+map '' <Leader>c<Space>
+vmap '' <Leader>c<Space>
+
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+
 " delimitMate
 " =============== 
 let delimitMate_matchpairs = "(:),[:],{:}"
-let delimitMate_expand_cr=1
+let delimitMate_expand_cr = 1
 
 
 " LargeFile
@@ -250,6 +266,8 @@ let g:vim_markdown_no_default_key_mappings = 1
 " =============== 
 
 " Double-clicking with the LeftMouse add a coloured mark into that word. Uses the plugin EasyMark
+map <Leader>h \m
+vmap <Leader>h \m
 map <2-LeftMouse> \m
 
 
@@ -289,8 +307,8 @@ nmap > <Plug>Argumentative_MoveRight
 " vim-easymotion
 " =============== 
 
-" Press 's' to search character using plugin EasyMotion
-nmap s <Plug>(easymotion-s)
+" Press 'gt' to search character using plugin EasyMotion
+nmap gt <Plug>(easymotion-s)
 
 
 " tagbar
@@ -298,5 +316,16 @@ nmap s <Plug>(easymotion-s)
 
 " Press 'F8' to toggle the Tagbar. Doesn't require a processed tag for it
 nmap <F8> :TagbarToggle<CR>
+
+
+" splitjoin.vim
+" =============== 
+nmap <Leader>ls :SplitjoinSplit<CR>
+nmap <Leader>lj :SplitjoinJoin<CR>
+
+
+" SwapText
+" =============== 
+vmap s <Leader>x
 
 " ===============================================
