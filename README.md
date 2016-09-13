@@ -54,7 +54,7 @@
 
 ## Motion
 
-* `gt<character>`: Go To character on the screen. Use it as an easy motion.
+* `j<character>`: Jump to character on the screen. Use it as an easy motion.
 * `%`: If the cursor is under the start of a block - parenthesis, brackets, tags - it'll go to the end, and vice-versa.
 
 

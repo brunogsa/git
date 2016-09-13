@@ -307,8 +307,8 @@ nmap > <Plug>Argumentative_MoveRight
 " vim-easymotion
 " =============== 
 
-" Press 'gt' to search character using plugin EasyMotion
-nmap gt <Plug>(easymotion-s)
+" Press 'j' to search character using plugin EasyMotion
+nmap j <Plug>(easymotion-s)
 
 
 " tagbar
