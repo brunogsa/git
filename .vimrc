@@ -307,8 +307,8 @@ nmap > <Plug>Argumentative_MoveRight
 " vim-easymotion
 " =============== 
 
-" Press 'j' to search character using plugin EasyMotion
-nmap j <Plug>(easymotion-s)
+" Press 's' to search character using plugin EasyMotion
+nmap s <Plug>(easymotion-s)
 
 
 " tagbar
@@ -326,6 +326,6 @@ nmap <Leader>lj :SplitjoinJoin<CR>
 
 " SwapText
 " =============== 
-vmap s <Leader>x
+vmap <Leader>s <Leader>x
 
 " ===============================================

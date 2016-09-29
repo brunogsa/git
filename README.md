@@ -54,14 +54,14 @@
 
 ## Motion
 
-* `j<character>`: Jump to character on the screen. Use it as an easy motion.
+* `s<character>`: Search a character on the screen. Use it as an easy motion.
 * `%`: If the cursor is under the start of a block - parenthesis, brackets, tags - it'll go to the end, and vice-versa.
 
 
 ## Swapping Texts
 
-* On visual selection, `s` servers to swap.
-* Delete a word. Select the word you want to swap. Press `s`.
+* On visual selection, `\s` servers to swap.
+* Delete a word. Select the word you want to swap. Press `\s`.
 * It also work with lines.
 
 
