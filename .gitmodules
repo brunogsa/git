@@ -148,3 +148,6 @@
 [submodule ".vim/bundle/SwapText"]
 	path = .vim/bundle/SwapText
 	url = https://github.com/vim-scripts/SwapText
+[submodule ".vim/bundle/Dockerfile.vim"]
+	path = .vim/bundle/Dockerfile.vim
+	url = https://github.com/ekalinin/Dockerfile.vim
