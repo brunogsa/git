@@ -121,9 +121,6 @@
 [submodule ".vim/bundle/vim-signature"]
 	path = .vim/bundle/vim-signature
 	url = https://github.com/kshenoy/vim-signature
-[submodule ".vim/bundle/vim-scavenger"]
-	path = .vim/bundle/vim-scavenger
-	url = https://github.com/kuoe0/vim-scavenger
 [submodule ".vim/bundle/yaifa"]
 	path = .vim/bundle/yaifa
 	url = https://github.com/raimondi/yaifa
@@ -145,3 +142,6 @@
 [submodule ".vim/bundle/Dockerfile.vim"]
 	path = .vim/bundle/Dockerfile.vim
 	url = https://github.com/ekalinin/Dockerfile.vim
+[submodule ".vim/bundle/vim-indexed-search"]
+	path = .vim/bundle/vim-indexed-search
+	url = https://github.com/henrik/vim-indexed-search
