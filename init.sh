@@ -11,6 +11,7 @@ sudo ln -sf ~/vim/.vimrc /root/.vimrc
 
 git submodule init
 git submodule update
+git submodule update --recursive --remote --merge
 
 sudo apt-get install -y npm
 sudo ln -sf /usr/bin/nodejs /usr/bin/node
