@@ -270,6 +270,9 @@ map <Leader>h \m
 vmap <Leader>h \m
 map <2-LeftMouse> \m
 
+" Maximum colors available
+let g:mwDefaultHighlightingPalette = 'maximum'
+
 
 " vim-move
 " =============== 
