@@ -89,9 +89,9 @@ set wrap
 set expandtab
 
 " The size of your indentation
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 
 " Indentation for HTML
 let g:html_indent_script1 = "inc"
