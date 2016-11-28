@@ -145,3 +145,6 @@
 [submodule ".vim/bundle/vim-indexed-search"]
 	path = .vim/bundle/vim-indexed-search
 	url = https://github.com/henrik/vim-indexed-search
+[submodule ".vim/bundle/indentLine"]
+	path = .vim/bundle/indentLine
+	url = https://github.com/Yggdroot/indentLine

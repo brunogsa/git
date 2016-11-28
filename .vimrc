@@ -81,12 +81,17 @@ set smartindent
 set cindent
 set preserveindent
 set copyindent
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
 set shiftround
 set smarttab
 set wrap
+
+" Uncomment it for Spaces, instead of Tabs
+set expandtab
+
+" The size of your indentation
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 
 " Indentation for HTML
 let g:html_indent_script1 = "inc"
@@ -330,5 +335,11 @@ nmap <Leader>lj :SplitjoinJoin<CR>
 " SwapText
 " =============== 
 vmap <Leader>s <Leader>x
+
+
+" indentLines
+" =============== 
+let g:indentLine_char = '┆'
+let g:indentLine_setColors = 0
 
 " ===============================================
