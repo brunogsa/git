@@ -166,7 +166,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_mode_map = { "mode": "passive" }
 let syntastic_aggregate_errors = 1
 
-let g:syntastic_javascript_checkers = ['jshint', 'jscs']
+let g:syntastic_javascript_checkers = ['eslint']
 
 
 " vim-javascript
