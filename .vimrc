@@ -175,6 +175,16 @@ let g:javascript_enable_domhtmlcss = 1
 let g:javascript_ignore_javaScriptdoc = 0
 
 
+" vim-json
+" =============== 
+let g:vim_json_syntax_conceal = 0
+
+
+" javascript-librariers-syntax
+" =============== 
+let g:used_javascript_libs = 'jquery,angularjs,react,flux,requirejs,jasmine,chai'
+
+
 " vim-css3-syntax
 " =============== 
 setlocal iskeyword+=-
@@ -340,6 +350,6 @@ vmap <Leader>s <Leader>x
 " indentLines
 " =============== 
 let g:indentLine_char = '┆'
-let g:indentLine_setColors = 0
+let g:indentLine_color_term = 32
 
 " ===============================================
