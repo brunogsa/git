@@ -110,7 +110,7 @@ set t_Co=256
 
 " Colorscheme
 set background=dark
-colorscheme molokai
+colorscheme wasabi256
 
 " General vision
 set lbr
