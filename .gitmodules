@@ -160,3 +160,6 @@
 [submodule ".vim/bundle/vim-nodejs-complete"]
 	path = .vim/bundle/vim-nodejs-complete
 	url = https://github.com/myhere/vim-nodejs-complete
+[submodule ".vim/bundle/vim-sneak"]
+	path = .vim/bundle/vim-sneak
+	url = https://github.com/justinmk/vim-sneak

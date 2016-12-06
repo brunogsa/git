@@ -329,13 +329,6 @@ nmap < <Plug>Argumentative_MoveLeft
 nmap > <Plug>Argumentative_MoveRight
 
 
-" vim-easymotion
-" =============== 
-
-" Press 's' to search character using plugin EasyMotion
-nmap s <Plug>(easymotion-s)
-
-
 " tagbar
 " =============== 
 
@@ -367,5 +360,33 @@ let g:limelight_conceal_ctermfg = 240
 let g:limelight_paragraph_span = 3
 let g:limelight_bop = '^\s'
 let g:limelight_eop = '\ze\n^\s'
+
+
+" vim-sneak
+" =============== 
+let g:sneak#s_next = 1
+
+"'s', sneak with 2 chars
+nmap f <Plug>Sneak_s
+nmap F <Plug>Sneak_S
+xmap f <Plug>Sneak_s
+xmap F <Plug>Sneak_S
+omap f <Plug>Sneak_s
+omap F <Plug>Sneak_S
+
+"replace 'f' with 1-char Sneak
+nmap f <Plug>Sneak_f
+nmap F <Plug>Sneak_F
+xmap f <Plug>Sneak_f
+xmap F <Plug>Sneak_F
+omap f <Plug>Sneak_f
+omap F <Plug>Sneak_F
+"replace 't' with 1-char Sneak
+nmap t <Plug>Sneak_t
+nmap T <Plug>Sneak_T
+xmap t <Plug>Sneak_t
+xmap T <Plug>Sneak_T
+omap t <Plug>Sneak_t
+omap T <Plug>Sneak_T
 
 " ===============================================
