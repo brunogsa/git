@@ -154,3 +154,9 @@
 [submodule ".vim/bundle/javascript-libraries-syntax.vim"]
 	path = .vim/bundle/javascript-libraries-syntax.vim
 	url = https://github.com/othree/javascript-libraries-syntax.vim
+[submodule ".vim/bundle/limelight.vim"]
+	path = .vim/bundle/limelight.vim
+	url = https://github.com/junegunn/limelight.vim
+[submodule ".vim/bundle/vim-nodejs-complete"]
+	path = .vim/bundle/vim-nodejs-complete
+	url = https://github.com/myhere/vim-nodejs-complete

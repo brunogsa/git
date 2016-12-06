@@ -68,6 +68,8 @@ sudo apt-get install -y xdg-utils
 sudo npm install -g instant-markdown-d
 cd -
 
+sudo npm install -g eslint_d
+
 # Install any additional lib that we use
 sudo apt-get update
 sudo apt-get install -y vim-athena

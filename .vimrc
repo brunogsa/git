@@ -101,8 +101,18 @@ let g:html_indent_inctags = "html,body,head"
 " ===============================================
 " Interface
 " ===============================================
+" True Colors
+set t_Co=256
+
+" Transparency in some terminals
+" hi Normal ctermbg=none
+" highlight NonText ctermbg=none
+
+" Colorscheme
 set background=dark
-colorscheme monokai
+colorscheme molokai
+
+" General vision
 set lbr
 set tw=250
 set scrolloff=5
@@ -112,14 +122,9 @@ hi MatchParen cterm=bold ctermbg=lightblue ctermfg=black
 set noruler
 set laststatus=2
 
-" Uses vim colorscheme and gnome-terminal transparency
-set t_Co=256
-hi Normal ctermbg=none
-highlight NonText ctermbg=none
-
-" Highlight some special characters: ;.,:{}()/[]<>
+" Highlight some special characters: ;.,:/[]=
 highlight SpecialChars cterm=bold
-match SpecialChars /;\|,\|\.\|:\|{\|}\|(\|)\|\/\|[\|]\|<\|>/
+match SpecialChars /;\|,\|\.\|:\|\/\|[\|]\|=/
 
 
 " ===============================================
@@ -166,7 +171,9 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_mode_map = { "mode": "passive" }
 let syntastic_aggregate_errors = 1
 
+" JavaScript Checkers
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exec = 'eslint_d'
 
 
 " vim-javascript
@@ -347,9 +354,18 @@ nmap <Leader>lj :SplitjoinJoin<CR>
 vmap <Leader>s <Leader>x
 
 
-" indentLines
+" indentlines
 " =============== 
 let g:indentLine_char = '┆'
 let g:indentLine_color_term = 32
+
+
+" limelight.vim
+" =============== 
+let g:limelight_conceal_ctermfg = 'gray'
+let g:limelight_conceal_ctermfg = 240
+let g:limelight_paragraph_span = 3
+let g:limelight_bop = '^\s'
+let g:limelight_eop = '\ze\n^\s'
 
 " ===============================================
