@@ -163,3 +163,6 @@
 [submodule ".vim/bundle/vim-sneak"]
 	path = .vim/bundle/vim-sneak
 	url = https://github.com/justinmk/vim-sneak
+[submodule ".vim/bundle/vim-gitgutter"]
+	path = .vim/bundle/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter

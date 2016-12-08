@@ -381,6 +381,7 @@ xmap f <Plug>Sneak_f
 xmap F <Plug>Sneak_F
 omap f <Plug>Sneak_f
 omap F <Plug>Sneak_F
+
 "replace 't' with 1-char Sneak
 nmap t <Plug>Sneak_t
 nmap T <Plug>Sneak_T
@@ -388,5 +389,16 @@ xmap t <Plug>Sneak_t
 xmap T <Plug>Sneak_T
 omap t <Plug>Sneak_t
 omap T <Plug>Sneak_T
+
+
+" vim-gitgutter
+" =============== 
+" Signs are disabled by default, can be toggled
+let g:gitgutter_signs = 0
+map <F4> :GitGutterSignsToggle<CR>
+
+" Hotkeys for fast motion between hunks
+nmap ]h <Plug>GitGutterNextHunk
+nmap [h <Plug>GitGutterPrevHunk
 
 " ===============================================
