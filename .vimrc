@@ -18,9 +18,6 @@ filetype indent on
 filetype plugin on
 filetype on
 
-" Automatically set wrap when starting a vim diff
-autocmd FilterWritePre * if &diff | setlocal wrap< | endif
-
 " Auto reload vim
 set autoread
 set updatetime=1000
@@ -98,6 +95,9 @@ let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
 let g:html_indent_inctags = "html,body,head"
 
+" Automatically set wrap when starting a vim diff
+autocmd FilterWritePre * if &diff | setlocal wrap< | endif
+
 " ===============================================
 " Interface
 " ===============================================
@@ -111,6 +111,11 @@ colorscheme wasabi256
 " Transparency in some terminals
 hi Normal ctermbg=none
 highlight NonText ctermbg=none
+
+" Colorscheme for vimdiff
+if &diff
+  colorscheme jellybeans
+endif
 
 " General vision
 set lbr
@@ -265,8 +270,19 @@ let g:jsdoc_input_description = 1
 " =============== 
 let g:lightline = {
 	\ 'colorscheme': 'seoul256',
+	\ 'active': {
+	\   'left': [ [ 'mode', 'paste' ],
+	\             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
+	\ },
 	\ 'component': {
 	\   'readonly': '%{&readonly?"READ-ONLY":""}',
+	\   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
+	\   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
+	\ },
+	\ 'component_visible_condition': {
+	\   'readonly': '(&filetype!="help"&& &readonly)',
+	\   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
+	\   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
 	\ },
 	\ 'separator': { 'left': '', 'right': '' },
 	\ 'subseparator': { 'left': '|', 'right': '|' }
