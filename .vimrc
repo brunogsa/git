@@ -104,13 +104,13 @@ let g:html_indent_inctags = "html,body,head"
 " True Colors
 set t_Co=256
 
-" Transparency in some terminals
-" hi Normal ctermbg=none
-" highlight NonText ctermbg=none
-
 " Colorscheme
 set background=dark
 colorscheme wasabi256
+
+" Transparency in some terminals
+hi Normal ctermbg=none
+highlight NonText ctermbg=none
 
 " General vision
 set lbr
