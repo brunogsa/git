@@ -417,4 +417,10 @@ map <F4> :GitGutterSignsToggle<CR>
 nmap ]h <Plug>GitGutterNextHunk
 nmap [h <Plug>GitGutterPrevHunk
 
+
+" vim-better-whitespace
+" =============== 
+" These file types automatically remove trailling spaces on save
+autocmd FileType javascript,html autocmd BufWritePre <buffer> StripWhitespace
+
 " ===============================================
