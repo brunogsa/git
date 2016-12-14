@@ -18,10 +18,10 @@ filetype indent on
 filetype plugin on
 filetype on
 
-" Auto reload vim
-set autoread
-set updatetime=1000
-au CursorMoved,CursorMovedI,CursorHold,CursorHoldI * checktime
+" Auto reload vim. Disabled by default, due performance issues
+" set autoread
+" set updatetime=1000
+" au CursorMoved,CursorMovedI,CursorHold,CursorHoldI * checktime
 
 " Fold options. I prefer fold by identation
 set foldmethod=indent
