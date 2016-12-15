@@ -178,3 +178,9 @@
 [submodule ".vim/bundle/vim-tmux-focus-events"]
 	path = .vim/bundle/vim-tmux-focus-events
 	url = https://github.com/tmux-plugins/vim-tmux-focus-events
+[submodule ".vim/bundle/SyntaxComplete"]
+	path = .vim/bundle/SyntaxComplete
+	url = https://github.com/vim-scripts/SyntaxComplete
+[submodule ".vim/bundle/yajs.vim"]
+	path = .vim/bundle/yajs.vim
+	url = https://github.com/othree/yajs.vim

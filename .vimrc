@@ -319,7 +319,7 @@ let g:move_key_modifier = 'C'
 
 " NERDTree
 " =============== 
-map <F7> :NERDTreeToggle<CR>
+map <F8> :NERDTreeToggle<CR>
 
 
 " wildfire.vim
@@ -343,13 +343,6 @@ let g:yafa_indentation = 1
 " =============== 
 nmap < <Plug>Argumentative_MoveLeft
 nmap > <Plug>Argumentative_MoveRight
-
-
-" tagbar
-" =============== 
-
-" Press 'F8' to toggle the Tagbar. Doesn't require a processed tag for it
-nmap <F8> :TagbarToggle<CR>
 
 
 " splitjoin.vim
@@ -407,20 +400,20 @@ omap t <Plug>Sneak_t
 omap T <Plug>Sneak_T
 
 
-" vim-gitgutter
-" =============== 
-" Signs are disabled by default, can be toggled
-let g:gitgutter_signs = 0
-map <F4> :GitGutterSignsToggle<CR>
-
-" Hotkeys for fast motion between hunks
-nmap ]h <Plug>GitGutterNextHunk
-nmap [h <Plug>GitGutterPrevHunk
-
-
 " vim-better-whitespace
 " =============== 
 " These file types automatically remove trailling spaces on save
 autocmd FileType javascript,html autocmd BufWritePre <buffer> StripWhitespace
+
+
+" SyntaxComplete
+" =============== 
+" Enable omni completion based on syntax highlighting, on languages that don't have it yet
+if has("autocmd") && exists("+omnifunc")
+  autocmd Filetype *
+        \ if &omnifunc == "" |
+        \ 	setlocal omnifunc=syntaxcomplete#Complete |
+        \ endif
+endif
 
 " ===============================================
