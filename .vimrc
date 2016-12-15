@@ -324,7 +324,7 @@ map <F8> :NERDTreeToggle<CR>
 
 " wildfire.vim
 " =============== 
-let g:wildfire_objects = ["iw", "i'", 'i"', "i)", "i]", "i}", "it", "ii", "ip"]
+let g:wildfire_objects = ["iv", "iw", "ia", "i'", 'i"', "i)", "i]", "i}", "ip"]
 
 " This selects the next closest text object.
 map <Space> <Plug>(wildfire-fuel)
