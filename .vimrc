@@ -146,8 +146,12 @@ map <silent> <Right> l
 map b 0
 map e $
 
+" Hybrid numbers column, active by default
+set relativenumber 
+set number 
+
 " F2 toggles the number lines
-map <F2> :set number!<Cr>
+map <F2> :set number!<Cr>:set relativenumber!<Cr>
 
 " Search only in visual selection
 vnoremap / <Esc>/\%V
@@ -324,7 +328,7 @@ map <F8> :NERDTreeToggle<CR>
 
 " wildfire.vim
 " =============== 
-let g:wildfire_objects = ["iv", "iw", "i'", 'i"', "i)", "i]", "i}", "ii"]
+let g:wildfire_objects = ["iw", "iv", "i'", 'i"', "i)", "i]", "i}", "ii"]
 
 " This selects the next closest text object.
 map <Space> <Plug>(wildfire-fuel)
