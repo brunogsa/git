@@ -53,8 +53,6 @@ cd .vim/bundle/tern_for_vim/
 npm install
 cd -
 
-sudo npm install -g jsctags
-
 cd .vim/bundle/YouCompleteMe/
 git submodule update --init  --recursive
 sudo apt-get install -y build-essential cmake
@@ -78,6 +76,7 @@ sudo apt-get install -y libxml2-utils
 # Clean any mess
 sudo apt autoremove
 
-echo "@@@ You probably want to install some Syntax Checkers, so syntastic plugin can really work."
-echo "@@@ For more details: https://github.com/scrooloose/syntastic/wiki/Syntax-Checkers"
+echo "# You probably want to install some Syntax Checkers, so syntastic plugin can really work."
+echo "# For more details: https://github.com/scrooloose/syntastic/wiki/Syntax-Checkers"
+
 echo "Done!"
