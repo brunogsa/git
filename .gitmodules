@@ -169,3 +169,12 @@
 [submodule ".vim/bundle/vim-smartword"]
 	path = .vim/bundle/vim-smartword
 	url = https://github.com/kana/vim-smartword
+[submodule ".vim/bundle/vim-textobj-comment"]
+	path = .vim/bundle/vim-textobj-comment
+	url = https://github.com/glts/vim-textobj-comment
+[submodule ".vim/bundle/TextObjectify"]
+	path = .vim/bundle/TextObjectify
+	url = https://github.com/paradigm/TextObjectify
+[submodule ".vim/bundle/vim-textobj-anyblock"]
+	path = .vim/bundle/vim-textobj-anyblock
+	url = https://github.com/rhysd/vim-textobj-anyblock
