@@ -358,8 +358,8 @@ omap T <Plug>Sneak_T
 
 " vim-better-whitespace
 " ===============
-" These file types automatically remove trailling spaces on save
-autocmd FileType javascript,html autocmd BufWritePre <buffer> StripWhitespace
+" Automatically remove trailling spaces on save
+autocmd BufWritePre <buffer> StripWhitespace
 
 
 " SyntaxComplete
