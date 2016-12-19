@@ -389,4 +389,9 @@ vmap <silent> <leader>lu :CamelToSnake!<CR>gv:HyphenToSnake!<CR>
 " ===============
 let g:skipview_files = ['COMMIT_EDITMSG']
 
+
+" switch.vim
+" ===============
+let g:switch_mapping = "çç"
+
 " ===============================================
