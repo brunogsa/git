@@ -349,11 +349,6 @@ nmap <Leader>ls :SplitjoinSplit<CR>
 nmap <Leader>lj :SplitjoinJoin<CR>
 
 
-" SwapText
-" =============== 
-vmap <Leader>s <Leader>x
-
-
 " indentlines
 " =============== 
 let g:indentLine_char = '┆'

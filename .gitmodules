@@ -133,9 +133,6 @@
 [submodule ".vim/bundle/rename.vim"]
 	path = .vim/bundle/rename.vim
 	url = https://github.com/danro/rename.vim
-[submodule ".vim/bundle/SwapText"]
-	path = .vim/bundle/SwapText
-	url = https://github.com/vim-scripts/SwapText
 [submodule ".vim/bundle/vim-indexed-search"]
 	path = .vim/bundle/vim-indexed-search
 	url = https://github.com/henrik/vim-indexed-search
