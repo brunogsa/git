@@ -315,17 +315,6 @@ let g:mwDefaultHighlightingPalette = 'maximum'
 map <F8> :NERDTreeToggle<CR>
 
 
-" wildfire.vim
-" =============== 
-let g:wildfire_objects = ["iw", "iv", "i'", 'i"', "i)", "i]", "i}", "ii"]
-
-" This selects the next closest text object.
-map <Space> <Plug>(wildfire-fuel)
-
-" This selects the previous closest text object.
-vmap <Backspace> <Plug>(wildfire-water)
-
-
 " yaifa
 " =============== 
 let g:yafa_tab_width = 4

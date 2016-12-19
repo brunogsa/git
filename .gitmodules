@@ -88,9 +88,6 @@
 [submodule ".vim/bundle/clever-f.vim"]
 	path = .vim/bundle/clever-f.vim
 	url = https://github.com/rhysd/clever-f.vim
-[submodule ".vim/bundle/wildfire.vim"]
-	path = .vim/bundle/wildfire.vim
-	url = https://github.com/gcmt/wildfire.vim
 [submodule ".vim/bundle/matchit.zip"]
 	path = .vim/bundle/matchit.zip
 	url = https://github.com/vim-scripts/matchit.zip
