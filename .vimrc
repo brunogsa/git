@@ -20,7 +20,7 @@ filetype on
 
 " Auto reload vim, if file changed elsewhere
 set autoread
-au FocusGained,FocusLost * checktime
+au FocusGained * checktime
 
 " Fold options. I prefer fold by identation
 set foldmethod=indent
