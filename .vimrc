@@ -18,15 +18,14 @@ filetype indent on
 filetype plugin on
 filetype on
 
-" Auto reload vim. Disabled by default, due performance issues
-" set autoread
-" set updatetime=1000
-" au CursorMoved,CursorMovedI,CursorHold,CursorHoldI * checktime
+" Auto reload vim, if file changed elsewhere
+set autoread
+au FocusGained,FocusLost * checktime
 
 " Fold options. I prefer fold by identation
 set foldmethod=indent
 set foldlevelstart=2
-set list lcs=tab:\┆\ 
+set list lcs=tab:\┆\
 
 " Search options
 set incsearch
@@ -37,7 +36,6 @@ set splitbelow
 set splitright
 
 " Completion options
-set omnifunc=syntaxcomplete#Complete
 set wildmode=longest,list
 set wildmenu
 set completeopt=longest,menu
@@ -54,16 +52,10 @@ set backspace=indent,eol,start
 " Share clipboard with system
 set clipboard=unnamed,unnamedplus
 
-" Add a line above the cursor
-set cursorline
-
 " No annoying backup files
 set nobackup
 set nowritebackup
 set noswapfile
-
-set showmatch
-set viminfo^=%
 
 " Mouse only works on Normal Mode
 set mouse=n
@@ -71,8 +63,22 @@ set mouse=n
 " Set spell checking to US english
 set spelllang=en_us
 
-" Indentation options
+" Efficient way to move through your code using the Arrow Keys
+map <silent> <Left> h
+map <silent> <Down> gj
+map <silent> <Up> gk
+map <silent> <Right> l
+
+" ===============================================
+" Interface
+" ===============================================
+
 syntax on
+
+" Add a line above the cursor
+set cursorline
+
+" Indentation options
 set autoindent
 set smartindent
 set cindent
@@ -98,9 +104,6 @@ let g:html_indent_inctags = "html,body,head"
 " Automatically set wrap when starting a vim diff
 autocmd FilterWritePre * if &diff | setlocal wrap< | endif
 
-" ===============================================
-" Interface
-" ===============================================
 " True Colors
 set t_Co=256
 
@@ -131,24 +134,16 @@ set laststatus=2
 highlight SpecialChars cterm=bold
 match SpecialChars /;\|,\|\.\|:\|\/\|[\|]\|=/
 
+" Hybrid numbers column, active by default
+set relativenumber
+set number
 
 " ===============================================
 " Hotkeys
 " ===============================================
-
-" Efficient way to move through your code using the Arrow Keys
-map <silent> <Left> h
-map <silent> <Down> gj
-map <silent> <Up> gk
-map <silent> <Right> l
-
 " 'b' goes to the beginning of a line. 'e' to the end of the line.
 map b 0
 map e $
-
-" Hybrid numbers column, active by default
-set relativenumber 
-set number 
 
 " F2 toggles the number lines
 map <F2> :set number!<Cr>:set relativenumber!<Cr>
@@ -159,7 +154,7 @@ vnoremap / <Esc>/\%V
 " PrettyXML: Format a line of XML
 vmap <Leader>fx :!xmllint --format --recover - 2>/dev/null<CR>
 
-" PreetyJSON: Format a line of JSON
+" PrettyJSON: Format a line of JSON
 vmap <Leader>fj :!python -m json.tool<CR>
 
 " ===============================================
@@ -167,7 +162,7 @@ vmap <Leader>fj :!python -m json.tool<CR>
 " ===============================================
 
 " syntastic
-" =============== 
+" ===============
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -186,34 +181,33 @@ let g:syntastic_javascript_eslint_exec = 'eslint_d'
 
 
 " vim-javascript
-" =============== 
+" ===============
 let g:javascript_enable_domhtmlcss = 1
 let g:javascript_ignore_javaScriptdoc = 0
 
 
 " vim-json
-" =============== 
+" ===============
 let g:vim_json_syntax_conceal = 0
 
 
 " javascript-librariers-syntax
-" =============== 
-let g:used_javascript_libs = 'jquery,angularjs,react,flux,requirejs,jasmine,chai'
+" ===============
+let g:used_javascript_libs = 'jquery,angularjs,react,flux,chai'
 
 
 " vim-css3-syntax
-" =============== 
+" ===============
 setlocal iskeyword+=-
 
 augroup VimCSS3Syntax
 	autocmd!
-
 	autocmd FileType css setlocal iskeyword+=-
 augroup END
 
 
 " nerdcommenter
-" =============== 
+" ===============
 map '' <Leader>c<Space>
 vmap '' <Leader>c<Space>
 
@@ -228,25 +222,18 @@ let g:NERDCommentEmptyLines = 1
 
 
 " delimitMate
-" =============== 
+" ===============
 let delimitMate_matchpairs = "(:),[:],{:}"
 let delimitMate_expand_cr = 1
 
 
 " LargeFile
-" =============== 
+" ===============
 let g:LargeFile = 0.5
 
 
-" ultisnips
-" =============== 
-let g:UltiSnipsExpandTrigger="<C-e>"
-let g:UltiSnipsJumpForwardTrigger="<C-e>"
-let g:UltiSnipsJumpBackwardTrigger="<C-f>"
-
-
 " YouCompleteMe
-" =============== 
+" ===============
 let g:ycm_complete_in_comments = 1
 let g:ycm_complete_in_strings = 1
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
@@ -259,13 +246,13 @@ let g:ycm_key_list_previous_completion = ['<Up>']
 
 
 " vim-jsdoc
-" =============== 
+" ===============
 let g:jsdoc_allow_input_prompt = 1
 let g:jsdoc_input_description = 1
 
 
 " lightline.vim
-" =============== 
+" ===============
 let g:lightline = {
 	\ 'colorscheme': 'seoul256',
 	\ 'active': {
@@ -288,20 +275,18 @@ let g:lightline = {
 
 
 " vim-instant-markdown
-" =============== 
-let g:instant_markdown_autostart = 1
+" ===============
+let g:instant_markdown_autostart = 0
 
 
 " markdown-syntax
-" =============== 
+" ===============
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_no_default_key_mappings = 1
 
 
 " vim-mark
-" =============== 
-
-" Double-clicking with the LeftMouse add a coloured mark into that word. Uses the plugin EasyMark
+" ===============
 map <Leader>h \m
 vmap <Leader>h \m
 map <2-LeftMouse> \m
@@ -311,30 +296,30 @@ let g:mwDefaultHighlightingPalette = 'maximum'
 
 
 " NERDTree
-" =============== 
+" ===============
 map <F8> :NERDTreeToggle<CR>
 
 
 " yaifa
-" =============== 
-let g:yafa_tab_width = 4
+" ===============
+let g:yafa_tab_width = 2
 let g:yafa_indentation = 1
 
 
 " splitjoin.vim
-" =============== 
+" ===============
 nmap <Leader>ls :SplitjoinSplit<CR>
 nmap <Leader>lj :SplitjoinJoin<CR>
 
 
 " indentlines
-" =============== 
+" ===============
 let g:indentLine_char = '┆'
 let g:indentLine_color_term = 32
 
 
 " limelight.vim
-" =============== 
+" ===============
 let g:limelight_conceal_ctermfg = 'gray'
 let g:limelight_conceal_ctermfg = 240
 let g:limelight_paragraph_span = 3
@@ -343,7 +328,7 @@ let g:limelight_eop = '\ze\n^\s'
 
 
 " vim-sneak
-" =============== 
+" ===============
 let g:sneak#s_next = 1
 
 "'s', sneak with 2 chars
@@ -372,19 +357,19 @@ omap T <Plug>Sneak_T
 
 
 " vim-better-whitespace
-" =============== 
+" ===============
 " These file types automatically remove trailling spaces on save
 autocmd FileType javascript,html autocmd BufWritePre <buffer> StripWhitespace
 
 
 " SyntaxComplete
-" =============== 
+" ===============
 " Enable omni completion based on syntax highlighting, on languages that don't have it yet
 if has("autocmd") && exists("+omnifunc")
   autocmd Filetype *
-        \ if &omnifunc == "" |
-        \ 	setlocal omnifunc=syntaxcomplete#Complete |
-        \ endif
+    \ if &omnifunc == "" |
+    \ 	setlocal omnifunc=syntaxcomplete#Complete |
+    \ endif
 endif
 
 " ===============================================
