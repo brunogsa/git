@@ -384,4 +384,9 @@ vmap <silent> <leader>lc :HyphenToCamel!<CR>gv:SnakeToCamel!<CR>
 " To Underscore
 vmap <silent> <leader>lu :CamelToSnake!<CR>gv:HyphenToSnake!<CR>
 
+
+" restore_view.vim
+" ===============
+let g:skipview_files = ['COMMIT_EDITMSG']
+
 " ===============================================
