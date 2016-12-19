@@ -18,10 +18,6 @@ filetype indent on
 filetype plugin on
 filetype on
 
-" Auto reload vim, if file changed elsewhere
-set autoread
-au FocusGained * checktime
-
 " Fold options. I prefer fold by identation
 set foldmethod=indent
 set foldlevelstart=2
@@ -257,17 +253,15 @@ let g:lightline = {
         \ 'colorscheme': 'seoul256',
         \ 'active': {
         \   'left': [ [ 'mode', 'paste' ],
-        \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
+        \             [ 'readonly', 'filename', 'modified' ] ]
         \ },
         \ 'component': {
         \   'readonly': '%{&readonly?"READ-ONLY":""}',
-        \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
-        \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
+        \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}'
         \ },
         \ 'component_visible_condition': {
         \   'readonly': '(&filetype!="help"&& &readonly)',
-        \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
-        \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
+        \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))'
         \ },
         \ 'separator': { 'left': '', 'right': '' },
         \ 'subseparator': { 'left': '|', 'right': '|' }
