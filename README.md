@@ -1,12 +1,12 @@
 # General Features
 
-* `F2`: Toggle the Line Numbers.
-* `F7`: Toggle NERDTree.
-* `F8`: Toggle Tagbar.
+* `b`: Beginning of the line.
+* `e`: End of the line.
 
+* `F2`: Toggle the Line Numbers.
+* `F8`: Toggle NERDTree.
 
 * `i`: Enter in the _Insert Mode_.
-
 * `~`: Toggle between lower and uppercase.
 
 
@@ -49,29 +49,14 @@
 
 
 * `cs<surrounding1><surrounding2>`: Changes the surrounding character 1, for the surrounding character 2.
+* `S<surround>`: Add surround to the visual selected word.
 * TBD: Easy way to add surroundings to the current word.
 
 
 ## Motion
 
-* `s<character>`: Search a character on the screen. Use it as an easy motion.
+* `s<2-characters>`: Search the 2 characters on the screen. Use it as an easy motion.
 * `%`: If the cursor is under the start of a block - parenthesis, brackets, tags - it'll go to the end, and vice-versa.
-
-
-## Swapping Texts
-
-* On visual selection, `\s` servers to swap.
-* Delete a word. Select the word you want to swap. Press `\s`.
-* It also work with lines.
-
-
-* For fast swaping on: Function Args, Array/Object elements
-* Use `>` to move right.
-* Use `<` to move left.
-
-
-* `CTRL + j`: Move line down.
-* `CTRL + k`: Move line up.
 
 
 ## Text Selection
@@ -79,10 +64,6 @@
 * `v`: Enter in the _Visual Mode_. Selects the current character.
 * `V`: Enter in the _Visual Mode_. Selects the current line.
 * `CTRL + v`: Enter in the _Visual Mode_. Box/Region selection.
-
-
-* `SPACE`: Keep pressing to expand the selected text.
-* `BACKSPACE`: Come back to the previous selection.
 
 
 ## Highlights
@@ -99,14 +80,13 @@
 * `m + SPACE`: Delete all bookmarks.
 
 
-## Snippets
+# Text Objects
 
-TBD
+* `i`: Text Object for Identation.
+* `c`: Text Object for Comments.
+* `b`: Text Object for Any Block - '' "" {} [] and so on.
+* `a`: Text Object for Arguments.
 
-# Operator Objects
-
-* `b`: Beginning of the line.
-* `e`: End of the line.
 
 # Functions
 

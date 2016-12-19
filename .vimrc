@@ -201,8 +201,8 @@ let g:used_javascript_libs = 'jquery,angularjs,react,flux,chai'
 setlocal iskeyword+=-
 
 augroup VimCSS3Syntax
-	autocmd!
-	autocmd FileType css setlocal iskeyword+=-
+        autocmd!
+        autocmd FileType css setlocal iskeyword+=-
 augroup END
 
 
@@ -254,24 +254,24 @@ let g:jsdoc_input_description = 1
 " lightline.vim
 " ===============
 let g:lightline = {
-	\ 'colorscheme': 'seoul256',
-	\ 'active': {
-	\   'left': [ [ 'mode', 'paste' ],
-	\             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
-	\ },
-	\ 'component': {
-	\   'readonly': '%{&readonly?"READ-ONLY":""}',
-	\   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
-	\   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
-	\ },
-	\ 'component_visible_condition': {
-	\   'readonly': '(&filetype!="help"&& &readonly)',
-	\   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
-	\   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
-	\ },
-	\ 'separator': { 'left': '', 'right': '' },
-	\ 'subseparator': { 'left': '|', 'right': '|' }
-	\ }
+        \ 'colorscheme': 'seoul256',
+        \ 'active': {
+        \   'left': [ [ 'mode', 'paste' ],
+        \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
+        \ },
+        \ 'component': {
+        \   'readonly': '%{&readonly?"READ-ONLY":""}',
+        \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
+        \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
+        \ },
+        \ 'component_visible_condition': {
+        \   'readonly': '(&filetype!="help"&& &readonly)',
+        \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
+        \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
+        \ },
+        \ 'separator': { 'left': '', 'right': '' },
+        \ 'subseparator': { 'left': '|', 'right': '|' }
+        \ }
 
 
 " vim-instant-markdown
