@@ -372,4 +372,16 @@ if has("autocmd") && exists("+omnifunc")
     \ endif
 endif
 
+
+" vim-case-convert
+" ===============
+" To Hyphen
+vmap <silent> <leader>lh :CamelToHyphen!<CR>gv:SnakeToHyphen!<CR>
+
+" To Camel
+vmap <silent> <leader>lc :HyphenToCamel!<CR>gv:SnakeToCamel!<CR>
+
+" To Underscore
+vmap <silent> <leader>lu :CamelToSnake!<CR>gv:HyphenToSnake!<CR>
+
 " ===============================================

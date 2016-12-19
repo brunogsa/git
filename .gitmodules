@@ -190,3 +190,6 @@
 [submodule ".vim/bundle/vim-cursorword"]
 	path = .vim/bundle/vim-cursorword
 	url = https://github.com/itchyny/vim-cursorword
+[submodule ".vim/bundle/vim-case-convert"]
+	path = .vim/bundle/vim-case-convert
+	url = https://github.com/chiedo/vim-case-convert

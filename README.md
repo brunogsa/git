@@ -46,6 +46,9 @@
 
 * `/ls`: Change the code Layout. Split function arguments or elements from arrays and objects into many lines.
 * `/lj`: Change the code Layout. Join function arguments or elements from arrays and objects into one line.
+* `/lc`: Change the code Layout. The selected word is changed to Camel case
+* `/lu`: Change the code Layout. The selected word is changed to Underscore case
+* `/lh`: Change the code Layout. The selected word is changed to Hyphen case
 
 
 * `cs<surrounding1><surrounding2>`: Changes the surrounding character 1, for the surrounding character 2.
