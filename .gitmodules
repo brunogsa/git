@@ -39,7 +39,7 @@
 	url = https://github.com/itchyny/lightline.vim
 [submodule "vim-indexed-search"]
 	path = .vim/bundle/vim-indexed-search
-	url = https://github.com/brunogsa/vim-indexed-search
+	url = https://github.com/henrik/vim-indexed-search
 [submodule ".vim/bundle/MatchTagAlways"]
 	path = .vim/bundle/MatchTagAlways
 	url = https://github.com/Valloric/MatchTagAlways
