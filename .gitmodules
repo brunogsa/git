@@ -178,3 +178,6 @@
 [submodule ".vim/bundle/vim-textobj-anyblock"]
 	path = .vim/bundle/vim-textobj-anyblock
 	url = https://github.com/rhysd/vim-textobj-anyblock
+[submodule ".vim/bundle/restore_view.vim"]
+	path = .vim/bundle/restore_view.vim
+	url = https://github.com/vim-scripts/restore_view.vim
