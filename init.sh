@@ -43,7 +43,6 @@ sudo ln -sf ~/vim/.vimrc /root/.vimrc
 
 # Install / Update the plugins
 git submodule init
-git submodule update
 git submodule update --recursive --remote --merge
 
 sudo apt-get install -y npm
