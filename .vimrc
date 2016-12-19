@@ -310,11 +310,6 @@ map <2-LeftMouse> \m
 let g:mwDefaultHighlightingPalette = 'maximum'
 
 
-" vim-move
-" =============== 
-let g:move_key_modifier = 'C'
-
-
 " NERDTree
 " =============== 
 map <F8> :NERDTreeToggle<CR>
