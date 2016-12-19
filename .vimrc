@@ -245,12 +245,6 @@ let g:UltiSnipsJumpForwardTrigger="<C-e>"
 let g:UltiSnipsJumpBackwardTrigger="<C-f>"
 
 
-" supertab
-" =============== 
-let g:SuperTabDefaultCompletionType = "<c-n>"
-let g:SuperTabCrMapping = 0
-
-
 " YouCompleteMe
 " =============== 
 let g:ycm_complete_in_comments = 1
