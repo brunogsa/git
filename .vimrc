@@ -168,7 +168,7 @@ let g:syntastic_loc_list_height = 3
 let g:syntastic_check_on_wq = 1
 let g:syntastic_always_populate_loc_list = 1
 
-let g:syntastic_mode_map = { "mode": "passive" }
+let g:syntastic_mode_map = { "mode": "active" }
 let syntastic_aggregate_errors = 1
 
 " JavaScript Checkers
@@ -213,9 +213,6 @@ let g:NERDSpaceDelims = 1
 " Use compact syntax for prettified multi-line comments
 let g:NERDCompactSexyComs = 1
 
-" Allow commenting and inverting empty lines (useful when commenting a region)
-let g:NERDCommentEmptyLines = 1
-
 
 " delimitMate
 " ===============
@@ -237,7 +234,7 @@ let g:ycm_complete_in_strings = 1
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
 let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_seed_identifiers_with_syntax = 1
-let g:ycm_cache_omnifunc = 0
+let g:ycm_cache_omnifunc = 1
 let g:ycm_use_ultisnips_completer = 0
 
 
