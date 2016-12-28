@@ -365,4 +365,15 @@ let g:ag_prg = "/usr/bin/ag --vimgrep"
 let g:ag_working_path_mode = "r"
 
 
+" ctrlp.vim
+" ===============
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlPMixed'
+
+" Search on project
+let g:ctrlp_working_path_mode = 'r'
+
+" Ignore files from .gitignore
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+
 " ===============================================
