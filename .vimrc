@@ -292,6 +292,8 @@ nmap <Leader>lj :SplitjoinJoin<CR>
 " ===============
 let g:indentLine_char = '┆'
 let g:indentLine_color_term = 32
+let g:indentLine_faster = 1
+let g:indentLine_maxLines = 512
 
 
 " limelight.vim
