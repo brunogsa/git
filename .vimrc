@@ -176,20 +176,10 @@ let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exec = 'eslint_d'
 
 
-" vim-javascript
-" ===============
-let g:javascript_enable_domhtmlcss = 1
-let g:javascript_ignore_javaScriptdoc = 0
-
-
 " vim-json
 " ===============
 let g:vim_json_syntax_conceal = 0
 
-
-" javascript-librariers-syntax
-" ===============
-let g:used_javascript_libs = 'jquery,angularjs,react,flux,chai'
 
 
 " vim-css3-syntax
@@ -238,12 +228,6 @@ let g:ycm_cache_omnifunc = 1
 let g:ycm_use_ultisnips_completer = 0
 
 
-" vim-jsdoc
-" ===============
-let g:jsdoc_allow_input_prompt = 1
-let g:jsdoc_input_description = 1
-
-
 " lightline.vim
 " ===============
 let g:lightline = {
@@ -263,11 +247,6 @@ let g:lightline = {
         \ 'separator': { 'left': '', 'right': '' },
         \ 'subseparator': { 'left': '|', 'right': '|' }
         \ }
-
-
-" vim-instant-markdown
-" ===============
-let g:instant_markdown_autostart = 0
 
 
 " markdown-syntax
@@ -362,18 +341,6 @@ if has("autocmd") && exists("+omnifunc")
     \ 	setlocal omnifunc=syntaxcomplete#Complete |
     \ endif
 endif
-
-
-" vim-case-convert
-" ===============
-" To Hyphen
-vmap <silent> <leader>lh :CamelToHyphen!<CR>gv:SnakeToHyphen!<CR>
-
-" To Camel
-vmap <silent> <leader>lc :HyphenToCamel!<CR>gv:SnakeToCamel!<CR>
-
-" To Underscore
-vmap <silent> <leader>lu :CamelToSnake!<CR>gv:HyphenToSnake!<CR>
 
 
 " restore_view.vim

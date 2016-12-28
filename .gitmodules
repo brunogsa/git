@@ -58,21 +58,12 @@
 [submodule ".vim/bundle/vim-css3-syntax"]
 	path = .vim/bundle/vim-css3-syntax
 	url = https://github.com/hail2u/vim-css3-syntax
-[submodule ".vim/bundle/vim-jsdoc"]
-	path = .vim/bundle/vim-jsdoc
-	url = https://github.com/heavenshell/vim-jsdoc
 [submodule ".vim/bundle/YouCompleteMe"]
 	path = .vim/bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe
 [submodule ".vim/bundle/vim-markdown"]
 	path = .vim/bundle/vim-markdown
 	url = https://github.com/plasticboy/vim-markdown.git
-[submodule ".vim/bundle/vim-instant-markdown"]
-	path = .vim/bundle/vim-instant-markdown
-	url = https://github.com/suan/vim-instant-markdown
-[submodule ".vim/bundle/vim-javascript-syntax"]
-	path = .vim/bundle/vim-javascript-syntax
-	url = https://github.com/jelera/vim-javascript-syntax
 [submodule ".vim/bundle/tabular"]
 	path = .vim/bundle/tabular
 	url = https://github.com/godlygeek/tabular
@@ -106,9 +97,6 @@
 [submodule ".vim/bundle/yaifa"]
 	path = .vim/bundle/yaifa
 	url = https://github.com/raimondi/yaifa
-[submodule ".vim/bundle/vim-es6"]
-	path = .vim/bundle/vim-es6
-	url = https://github.com/isRuslan/vim-es6
 [submodule ".vim/bundle/vim-narrow"]
 	path = .vim/bundle/vim-narrow
 	url = https://github.com/jkramer/vim-narrow
@@ -121,9 +109,6 @@
 [submodule ".vim/bundle/vim-json"]
 	path = .vim/bundle/vim-json
 	url = https://github.com/elzr/vim-json
-[submodule ".vim/bundle/javascript-libraries-syntax.vim"]
-	path = .vim/bundle/javascript-libraries-syntax.vim
-	url = https://github.com/othree/javascript-libraries-syntax.vim
 [submodule ".vim/bundle/limelight.vim"]
 	path = .vim/bundle/limelight.vim
 	url = https://github.com/junegunn/limelight.vim
@@ -133,9 +118,6 @@
 [submodule ".vim/bundle/vim-sneak"]
 	path = .vim/bundle/vim-sneak
 	url = https://github.com/justinmk/vim-sneak
-[submodule ".vim/bundle/vim-gitgutter"]
-	path = .vim/bundle/vim-gitgutter
-	url = https://github.com/airblade/vim-gitgutter
 [submodule ".vim/bundle/diffchar.vim"]
 	path = .vim/bundle/diffchar.vim
 	url = https://github.com/rickhowe/diffchar.vim
@@ -184,12 +166,6 @@
 [submodule ".vim/bundle/CursorLineCurrentWindow"]
 	path = .vim/bundle/CursorLineCurrentWindow
 	url = https://github.com/vim-scripts/CursorLineCurrentWindow
-[submodule ".vim/bundle/vim-cursorword"]
-	path = .vim/bundle/vim-cursorword
-	url = https://github.com/itchyny/vim-cursorword
-[submodule ".vim/bundle/vim-case-convert"]
-	path = .vim/bundle/vim-case-convert
-	url = https://github.com/chiedo/vim-case-convert
 [submodule ".vim/bundle/switch.vim"]
 	path = .vim/bundle/switch.vim
 	url = https://github.com/AndrewRadev/switch.vim
