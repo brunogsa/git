@@ -46,14 +46,13 @@ set title
 set backspace=indent,eol,start
 
 " Share clipboard with system
-nnoremap d "*d
-vnoremap D "*D
+set clipboard=unnamed,unnamedplus
 
-nnoremap y "*y
-vnoremap Y "*Y
-
-nnoremap p "*p
-vnoremap P "*P
+" Send deleted thing with 'x' and 'c' to black hole
+nnoremap x "_x
+vnoremap X "_X
+nnoremap c "_c
+vnoremap C "_C
 
 " No annoying backup files
 set nobackup
@@ -358,5 +357,12 @@ let g:skipview_files = ['COMMIT_EDITMSG']
 " switch.vim
 " ===============
 let g:switch_mapping = "çç"
+
+
+" ag.vim
+" ===============
+let g:ag_prg = "/usr/bin/ag --vimgrep"
+let g:ag_working_path_mode = "r"
+
 
 " ===============================================

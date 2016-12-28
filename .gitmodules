@@ -172,3 +172,6 @@
 [submodule ".vim/bundle/vim-templates"]
 	path = .vim/bundle/vim-templates
 	url = https://github.com/ap/vim-templates
+[submodule ".vim/bundle/ag.vim"]
+	path = .vim/bundle/ag.vim
+	url = https://github.com/rking/ag.vim

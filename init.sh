@@ -72,6 +72,7 @@ sudo apt-get update
 sudo apt-get install -y vim-athena
 sudo apt-get install -y exuberant-ctags
 sudo apt-get install -y libxml2-utils
+sudo apt-get install -y silversearcher-ag
 
 # Clean any mess
 sudo apt autoremove
