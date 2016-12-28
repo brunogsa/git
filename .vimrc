@@ -46,7 +46,14 @@ set title
 set backspace=indent,eol,start
 
 " Share clipboard with system
-set clipboard=unnamed,unnamedplus
+nnoremap d "*d
+vnoremap D "*D
+
+nnoremap y "*y
+vnoremap Y "*Y
+
+nnoremap p "*p
+vnoremap P "*P
 
 " No annoying backup files
 set nobackup
